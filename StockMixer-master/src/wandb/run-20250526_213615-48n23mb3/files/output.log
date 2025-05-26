@@ -1,0 +1,43 @@
+begin training...
+total train batches21
+total test_batches3
+Epoch 1/40, train_sqrt_loss: 0.471035, test_sqrt_loss: 0.372242
+Epoch 2/40, train_sqrt_loss: 0.309046, test_sqrt_loss: 0.252446
+Epoch 3/40, train_sqrt_loss: 0.216110, test_sqrt_loss: 0.179206
+Epoch 4/40, train_sqrt_loss: 0.155512, test_sqrt_loss: 0.136038
+Epoch 5/40, train_sqrt_loss: 0.115337, test_sqrt_loss: 0.104072
+Epoch 6/40, train_sqrt_loss: 0.090062, test_sqrt_loss: 0.087265
+Epoch 7/40, train_sqrt_loss: 0.075358, test_sqrt_loss: 0.079409
+Epoch 8/40, train_sqrt_loss: 0.066266, test_sqrt_loss: 0.071811
+Epoch 9/40, train_sqrt_loss: 0.061037, test_sqrt_loss: 0.068450
+Epoch 10/40, train_sqrt_loss: 0.057740, test_sqrt_loss: 0.066659
+Epoch 11/40, train_sqrt_loss: 0.055212, test_sqrt_loss: 0.064302
+Epoch 12/40, train_sqrt_loss: 0.052687, test_sqrt_loss: 0.057506
+Epoch 13/40, train_sqrt_loss: 0.051155, test_sqrt_loss: 0.057149
+Epoch 14/40, train_sqrt_loss: 0.049443, test_sqrt_loss: 0.058702
+Epoch 15/40, train_sqrt_loss: 0.048026, test_sqrt_loss: 0.053434
+Epoch 16/40, train_sqrt_loss: 0.046516, test_sqrt_loss: 0.052418
+Epoch 17/40, train_sqrt_loss: 0.045479, test_sqrt_loss: 0.051285
+Epoch 18/40, train_sqrt_loss: 0.044152, test_sqrt_loss: 0.054784
+Epoch 19/40, train_sqrt_loss: 0.043297, test_sqrt_loss: 0.049384
+Epoch 20/40, train_sqrt_loss: 0.042401, test_sqrt_loss: 0.048796
+Epoch 21/40, train_sqrt_loss: 0.041265, test_sqrt_loss: 0.047940
+Epoch 22/40, train_sqrt_loss: 0.040267, test_sqrt_loss: 0.049024
+Epoch 23/40, train_sqrt_loss: 0.039701, test_sqrt_loss: 0.047536
+Epoch 24/40, train_sqrt_loss: 0.038685, test_sqrt_loss: 0.045096
+Epoch 25/40, train_sqrt_loss: 0.038351, test_sqrt_loss: 0.046398
+Epoch 26/40, train_sqrt_loss: 0.036902, test_sqrt_loss: 0.044243
+Epoch 27/40, train_sqrt_loss: 0.036852, test_sqrt_loss: 0.041758
+Epoch 28/40, train_sqrt_loss: 0.035842, test_sqrt_loss: 0.041465
+Epoch 29/40, train_sqrt_loss: 0.035256, test_sqrt_loss: 0.041896
+Epoch 30/40, train_sqrt_loss: 0.035039, test_sqrt_loss: 0.045883
+Epoch 31/40, train_sqrt_loss: 0.034484, test_sqrt_loss: 0.039897
+Epoch 32/40, train_sqrt_loss: 0.033957, test_sqrt_loss: 0.040578
+Epoch 33/40, train_sqrt_loss: 0.034249, test_sqrt_loss: 0.043657
+Epoch 34/40, train_sqrt_loss: 0.033372, test_sqrt_loss: 0.041054
+Epoch 35/40, train_sqrt_loss: 0.033116, test_sqrt_loss: 0.039635
+Epoch 36/40, train_sqrt_loss: 0.032963, test_sqrt_loss: 0.043638
+Epoch 37/40, train_sqrt_loss: 0.032600, test_sqrt_loss: 0.043397
+Epoch 38/40, train_sqrt_loss: 0.032206, test_sqrt_loss: 0.039101
+Epoch 39/40, train_sqrt_loss: 0.032281, test_sqrt_loss: 0.040623
+Epoch 40/40, train_sqrt_loss: 0.032187, test_sqrt_loss: 0.040667

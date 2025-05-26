@@ -1,3 +1,4 @@
+import math
 import numpy as np
 import torch as torch
 from torch import nn, optim
@@ -14,11 +15,26 @@ else:
     print("CUDA not available!")
     exit()
 
+# 超参数探索实验设置
+# 7f5f63654c990eb6c7d796f534bf9db8cfcae73e
+# 学习率
+lr = 1e-3
+hyper_m = 10
+import wandb
+wandb.login()
+run = wandb.init(
+    project="stock",
+    config={
+        "lr": lr,
+        "hyper_m": hyper_m
+    },
+)
 
+# 基本信息
 stock_num = 83
 windows_length = 16
 fea_num = 5
-market_num = 10
+market_num = hyper_m
 scale_factor = 3
 
 
@@ -43,61 +59,50 @@ model = StockMixer(
 ).to(device)
 
 criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+optimizer = optim.Adam(model.parameters(), lr=lr)
 
 print('begin training...')
-
-total_batches = len(train_dataloader)
-print('total batches'+str(total_batches))
+total_train_batches = len(train_dataloader)
+total_test_batches = len(test_dataloader)
+print('total train batches'+str(total_train_batches))
+print('total test_batches'+str(total_test_batches))
 
 model.train()
 num_epochs = 40
 for epoch in range(num_epochs):
     running_loss = 0.0
 
-    batch_idx = 0
+    # batch_idx = 0
     for inputs, labels in train_dataloader:
-        batch_idx += 1
-
+        # batch_idx += 1
         inputs, labels = inputs.to(device), labels.to(device)
-
         optimizer.zero_grad()
-
         outputs = model(inputs)
-
         loss = criterion(outputs, labels)
-
         loss.backward()
-
         optimizer.step()
-
         running_loss += loss.item()
 
-        if batch_idx % 100 == 0:
-            print(f'Epoch {epoch + 1}/{num_epochs}, Batch {batch_idx}/{total_batches}, Loss: {loss.item():.6f}')
-    print(f'Epoch {epoch + 1}/{num_epochs}, Loss: {running_loss / total_batches:.6f}')
+        # if batch_idx % 100 == 0:
+        #     print(f'Epoch {epoch + 1}/{num_epochs}, Batch {batch_idx}/{total_batches}, Loss: {loss.item():.6f}')
 
-    # model.eval()
-    # test_loss = 0.0
-    # total_test_batches = len(test_dataloader)
-    # with torch.no_grad():
-    #     for inputs, labels in test_dataloader:
-    #         inputs, labels = inputs.to(device), labels.to(device)
-    #         outputs = model(inputs)
-    #         loss = criterion(outputs, labels)
-    #         test_loss += loss.item()
-    # print(f'Test Loss: {test_loss / total_test_batches:.6f}')
-    # model.train()
+    # 计算训练平均损失开方
+    avg_sqrt_train_loss = math.sqrt(running_loss / total_train_batches)
 
+    # test
+    model.eval()
+    test_loss = 0.0
+    with torch.no_grad():
+        for inputs, labels in test_dataloader:
+            inputs, labels = inputs.to(device), labels.to(device)
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
+            test_loss += loss.item()
+    model.train()
 
-print('begin testing...')
-model.eval()
-test_loss = 0.0
-total_test_batches = len(test_dataloader)
-with torch.no_grad():
-    for inputs, labels in test_dataloader:
-        inputs, labels = inputs.to(device), labels.to(device)
-        outputs = model(inputs)
-        loss = criterion(outputs, labels)
-        test_loss += loss.item()
-print(f'Test Loss: {test_loss / total_test_batches:.6f}')
+    # 计算平均测试损失
+    avg_sqrt_test_loss = math.sqrt(test_loss / total_test_batches)
+
+    print(f'Epoch {epoch + 1}/{num_epochs}, train_sqrt_loss: {avg_sqrt_train_loss:.6f},'
+          f' test_sqrt_loss: {avg_sqrt_test_loss:.6f}')
+    wandb.log({"train_sqrt_loss": avg_sqrt_train_loss, "test_sqrt_loss": avg_sqrt_test_loss})
