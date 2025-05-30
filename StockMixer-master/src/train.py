@@ -24,6 +24,7 @@ import wandb
 wandb.login()
 run = wandb.init(
     project="stock",
+    name = "stock_200",
     config={
         "lr": lr,
         "hyper_m": hyper_m
@@ -42,7 +43,9 @@ data = np.load('stock_data.npy')
 dataset = HKStockDataset(data)
 
 train_size = int(0.90 * len(dataset))
+print("train_size:", train_size)
 test_size = len(dataset) - train_size
+print("test_size:", test_size)
 
 train_dataset = Subset(dataset, range(train_size))
 test_dataset = Subset(dataset, range(train_size, len(dataset)))
@@ -68,7 +71,7 @@ print('total train batches'+str(total_train_batches))
 print('total test_batches'+str(total_test_batches))
 
 model.train()
-num_epochs = 40
+num_epochs = 200
 for epoch in range(num_epochs):
     running_loss = 0.0
 

@@ -1,12 +1,12 @@
 {
   "os": "Windows-11-10.0.26100-SP0",
   "python": "CPython 3.12.3",
-  "startedAt": "2025-05-26T13:36:15.245741Z",
+  "startedAt": "2025-05-30T13:27:08.347809Z",
   "program": "D:\\GitHub\\final_year_project\\StockMixer-master\\src\\train.py",
   "codePath": "StockMixer-master\\src\\train.py",
   "git": {
     "remote": "https://github.com/2023Liang3036195722/final_year_project.git",
-    "commit": "4a250453b18c5a9d722c9a5b419a2159758923bf"
+    "commit": "42887f04bf2e9d12496883250cf1d636b60b3815"
   },
   "email": "u3638178@connect.hku.hk",
   "root": "D:\\GitHub\\final_year_project\\StockMixer-master\\src",
@@ -20,7 +20,7 @@
   "disk": {
     "/": {
       "total": "699697983488",
-      "used": "259395981312"
+      "used": "264227606528"
     }
   },
   "memory": {
