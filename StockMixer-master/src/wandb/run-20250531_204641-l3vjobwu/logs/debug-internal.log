@@ -1,0 +1,16 @@
+{"time":"2025-05-31T20:46:41.8696035+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"D:\\GitHub\\final_year_project\\StockMixer-master\\src\\wandb\\run-20250531_204641-l3vjobwu\\logs\\debug-core.log"}
+{"time":"2025-05-31T20:46:42.234389+08:00","level":"INFO","msg":"created new stream","id":"l3vjobwu"}
+{"time":"2025-05-31T20:46:42.234389+08:00","level":"INFO","msg":"stream: started","id":"l3vjobwu"}
+{"time":"2025-05-31T20:46:42.234389+08:00","level":"INFO","msg":"handler: started","stream_id":"l3vjobwu"}
+{"time":"2025-05-31T20:46:42.234389+08:00","level":"INFO","msg":"sender: started","stream_id":"l3vjobwu"}
+{"time":"2025-05-31T20:46:42.234389+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"l3vjobwu"}
+{"time":"2025-05-31T20:46:42.4634809+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-31T20:48:08.3794067+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-31T20:48:08.3794067+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-31T20:48:09.3982276+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.2552207,"progress":"591B/591B"}],"total_operations":1}}
+{"time":"2025-05-31T20:48:09.4222558+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-31T20:48:09.6955015+08:00","level":"INFO","msg":"stream: closing","id":"l3vjobwu"}
+{"time":"2025-05-31T20:48:09.6955015+08:00","level":"INFO","msg":"handler: closed","stream_id":"l3vjobwu"}
+{"time":"2025-05-31T20:48:09.6955015+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"l3vjobwu"}
+{"time":"2025-05-31T20:48:09.6975018+08:00","level":"INFO","msg":"sender: closed","stream_id":"l3vjobwu"}
+{"time":"2025-05-31T20:48:09.6975018+08:00","level":"INFO","msg":"stream: closed","id":"l3vjobwu"}

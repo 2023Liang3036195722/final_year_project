@@ -1,0 +1,8 @@
+wandb_version: 1
+
+hyper_m:
+  value: 20
+lr:
+  value: 0.0038340468776537407
+weight_decay:
+  value: 4.200968870698622e-05

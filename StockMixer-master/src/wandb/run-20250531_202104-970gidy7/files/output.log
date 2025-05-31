@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "D:\GitHub\final_year_project\StockMixer-master\src\train.py", line 20, in train
+    lr = config.lr
+         ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lr'
