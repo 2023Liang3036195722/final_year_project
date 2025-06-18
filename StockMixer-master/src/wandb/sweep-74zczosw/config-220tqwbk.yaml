@@ -1,0 +1,6 @@
+wandb_version: 1
+
+lr:
+  value: 0.004988128378321211
+weight_decay:
+  value: 5.489107771417424e-07

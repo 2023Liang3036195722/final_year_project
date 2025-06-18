@@ -28,13 +28,6 @@ class HKStockDataset(Dataset):
         return data_input, data_label
 
 
-# data = np.load('../stock_data.npy')
-# dataset = HKStockDataset(data)
-#
-# dataloader = DataLoader(dataset, batch_size=1, shuffle=False)
-#
-# for batch in dataloader:
-#     print(batch)
-#     print(batch[0].shape)
-#     print(batch[1].shape)
-#     exit()
+data = np.load('stock_data.npy')
+dataset = HKStockDataset(data)
+print(len(dataset))
