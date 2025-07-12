@@ -1,7 +1,0 @@
-{"time":"2025-07-12T17:43:16.1119921+08:00","level":"INFO","msg":"stream: starting","core version":"0.20.2rc20250616"}
-{"time":"2025-07-12T17:43:17.3188594+08:00","level":"INFO","msg":"stream: created new stream","id":"ipsv1sfg"}
-{"time":"2025-07-12T17:43:17.3193664+08:00","level":"INFO","msg":"stream: started","id":"ipsv1sfg"}
-{"time":"2025-07-12T17:43:17.3193664+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"ipsv1sfg"}
-{"time":"2025-07-12T17:43:17.3193664+08:00","level":"INFO","msg":"sender: started","stream_id":"ipsv1sfg"}
-{"time":"2025-07-12T17:43:17.3193664+08:00","level":"INFO","msg":"handler: started","stream_id":"ipsv1sfg"}
-{"time":"2025-07-12T17:43:17.5543709+08:00","level":"INFO","msg":"Starting system monitor"}
