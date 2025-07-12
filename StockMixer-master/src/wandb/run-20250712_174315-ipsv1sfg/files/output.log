@@ -1,0 +1,16 @@
+train_size: 647
+test_size: 72
+begin training...
+total train batches21
+total test_batches3
+Epoch 1/100, train_sqrt_loss: 0.240575, test_sqrt_loss: 0.105325
+Best model saved at epoch 1 with test_sqrt_loss: 0.105325
+Epoch 2/100, train_sqrt_loss: 0.068497, test_sqrt_loss: 0.054812
+Best model saved at epoch 2 with test_sqrt_loss: 0.054812
+Epoch 3/100, train_sqrt_loss: 0.041762, test_sqrt_loss: 0.044839
+Best model saved at epoch 3 with test_sqrt_loss: 0.044839
+Epoch 4/100, train_sqrt_loss: 0.037902, test_sqrt_loss: 0.045625
+Epoch 5/100, train_sqrt_loss: 0.036499, test_sqrt_loss: 0.046625
+Epoch 6/100, train_sqrt_loss: 0.035116, test_sqrt_loss: 0.039996
+Best model saved at epoch 6 with test_sqrt_loss: 0.039996
+Epoch 7/100, train_sqrt_loss: 0.033753, test_sqrt_loss: 0.041920

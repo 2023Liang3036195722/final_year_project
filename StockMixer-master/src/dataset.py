@@ -19,7 +19,7 @@ class HKStockDataset(Dataset):
         data_input = self.data[:, i:i + self.windows_length, :]
         x = self.data[:, i + self.windows_length-1, -1]
         y = self.data[:, i + self.windows_length, -1]
-        data_label = (y-x)/x
+        data_label = (y-x)/x # * 10000 # 因为标签太小，增大一下
 
         # 转换数据类型为 torch.Tensor
         data_input = torch.tensor(data_input, dtype=torch.float32)
@@ -28,6 +28,6 @@ class HKStockDataset(Dataset):
         return data_input, data_label
 
 
-data = np.load('stock_data.npy')
-dataset = HKStockDataset(data)
-print(len(dataset))
+# data = np.load('stock_data.npy')
+# dataset = HKStockDataset(data)
+# print(len(dataset))

@@ -130,3 +130,45 @@ class StockMixer(nn.Module):
         # x(B,N)
         # print(x.shape)
         return x
+
+
+def get_loss(outputs, labels, alpha=0.1):
+    """
+    计算包含回归损失和排序损失的组合损失
+
+    参数:
+        outputs: 模型预测的涨跌幅，形状为 [B, N]
+        labels: 真实涨跌幅标签，形状为 [B, N]
+        alpha: 排序损失的权重系数，默认0.1
+
+    返回:
+        loss: 总损失
+        reg_loss: 回归损失(MSE)
+        rank_loss: 排序损失
+    """
+    # 计算 batch size 和股票数量
+    B, N = outputs.shape
+
+    # 回归损失 (MSE)
+    reg_loss = F.mse_loss(outputs, labels)
+    # 维度扩张
+    outputs = outputs.unsqueeze(2)
+    labels = labels.unsqueeze(2)
+
+    # 创建全1矩阵用于向量化计算
+    all_ones_B1N = torch.ones(B, 1, N, device=torch.device("cuda"))
+    all_ones_BN1 = torch.ones(B,N,1, device=torch.device("cuda"))
+
+    # 计算预测的pairwise差异矩阵 (B, N, N)
+    pred_diff = outputs @ all_ones_B1N - all_ones_BN1 @ outputs.transpose(1, 2)
+
+    # 计算真实的pairwise差异矩阵 (B, N, N)
+    true_diff = labels @ all_ones_B1N - all_ones_BN1 @ labels.transpose(1, 2)
+
+    # 计算排序损失: max(0, -预测差异*真实差异)
+    rank_loss = torch.mean(F.relu(-pred_diff * true_diff))
+
+    # 组合损失
+    loss = reg_loss + alpha * rank_loss
+
+    return loss

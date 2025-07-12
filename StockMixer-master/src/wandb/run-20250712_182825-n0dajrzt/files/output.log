@@ -1,0 +1,13 @@
+train_size: 647
+test_size: 72
+begin training...
+total train batches21
+total test_batches3
+Traceback (most recent call last):
+  File "D:\GitHub\final_year_project\StockMixer-master\src\train.py", line 93, in train
+    loss = get_loss(outputs, labels)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\src\model.py", line 155, in get_loss
+    B, N = outputs.shape
+    ^^^^
+ValueError: too many values to unpack (expected 2)
