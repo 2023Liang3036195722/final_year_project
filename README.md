@@ -41,10 +41,10 @@ Please follow these steps carefully to get the project up and running.
 
 First, open your terminal or command prompt and clone this repository to your local machine.
 
-```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd stockcode
-```
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
+   cd stockcode
+   ```
 
 ### 2. Backend Setup & Launch
 
