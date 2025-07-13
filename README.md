@@ -27,11 +27,9 @@ This is a full-featured, full-stack web application designed for stock data anal
 Before you begin, ensure you have the following software installed on your machine. These steps are for setting up on a clean computer.
 
 1.  **Git**: For cloning the repository.
-    *   [Download & Install Git]
-2.  **Node.js and npm**: Required to run the frontend application. The LTS (Long-Term Support) version is recommended.
-    *   [Download & Install Node.js] (npm is included in the installation)
-3.  **Python**: Required to run the backend server. Version 3.8 or higher is recommended.
-    *   [Download & Install Python] (During installation, be sure to check the box that says "Add Python to PATH")
+
+2.  **Node.js and npm**: Required to run the frontend application. The LTS (Long-Term Support) version is recommended.(npm is included in the installation)
+3.  **Python**: Required to run the backend server. Version 3.8 or higher is recommended. (During installation, be sure to check the box that says "Add Python to PATH")
 
 ## ⚙️ Installation & Setup
 
