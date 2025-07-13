@@ -9,23 +9,19 @@ parent_dir = Path(__file__).resolve().parent.parent.parent
 file_path = parent_dir / 'stock_list.csv'
 df = pd.read_csv(file_path,header=None)
 tickers = list(df[0])
-# 存在特殊股票
-for i in range(len(tickers)):
-    if len(tickers[i]) > 7:
-        tickers[i] = tickers[i][1:]
 company_names = list(df[1])
 # tickers = ["0700.HK", "9988.HK", "1398.HK", "0941.HK", "0939.HK", "0005.HK", "3988.HK", "1810.HK", "3690.HK", "9618.HK"]
 # company_names = ["腾讯控股", "阿里巴巴 - W", "工商银行", "中国移动", "建设银行", "汇丰控股", "中银香港", "小米集团 - W", "美团 - W", "京东集团 - SW"]
 
-start_date = datetime(2024, 1, 1).strftime("%Y-%m-%d")
-end_date = datetime(2024, 3, 2).strftime("%Y-%m-%d")
+start_date = datetime(2022, 5, 1).strftime("%Y-%m-%d")
+end_date = datetime(2025, 5, 1).strftime("%Y-%m-%d")
 
 # 存储时间
 ticker = "0700.HK"
 data = yf.download(ticker, start=start_date, end=end_date)
 trade_days = list(data.index)
 df = pd.DataFrame([trade_days])
-df.to_csv("trade_days1.csv", index=False, header=False, encoding="utf-8")
+df.to_csv("trade_days.csv", index=False, header=False, encoding="utf-8")
 
 def handle_nan(data):
     for col in data.columns:
@@ -65,14 +61,14 @@ for i, ticker in enumerate(tickers):
     stock_data[0, :, 4] = data['Close'].squeeze()
 
     if first:
-        np.save('stock_data1.npy', stock_data)
+        np.save('stock_data.npy', stock_data)
         first = False
     else:
-        existing_data = np.load('stock_data1.npy')
+        existing_data = np.load('stock_data.npy')
         new_data = np.concatenate((existing_data, stock_data), axis=0)
-        np.save('stock_data1.npy', new_data)
+        np.save('stock_data.npy', new_data)
 
-loaded_stock_data = np.load('stock_data1.npy')
+loaded_stock_data = np.load('stock_data.npy')
 # 检查是否有空值
 has_nan = np.isnan(loaded_stock_data).any()
 if has_nan:

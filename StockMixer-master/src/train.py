@@ -65,14 +65,14 @@ def train_test(config=None):
         # )
 
         # 基本信息
-        stock_num = 83
+        stock_num = 474
         windows_length = 16
         fea_num = 5
         market_num = hyper_m
         scale_factor = 3
 
 
-        data = np.load('stock_data.npy')
+        data = np.load('SP500.npy')
         dataset = HKStockDataset_prices(data)
 
         train_size = int(0.90 * len(dataset))

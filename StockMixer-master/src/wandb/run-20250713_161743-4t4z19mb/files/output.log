@@ -1,0 +1,22 @@
+train_size: 647
+test_size: 72
+begin training...
+total train batches21
+total test_batches3
+D:\GitHub\final_year_project\StockMixer-master\src\dataset.py:44: RuntimeWarning: divide by zero encountered in divide
+  data_ratio = (y-x)/x  * 100 # 因为标签太小，增大一下
+D:\GitHub\final_year_project\StockMixer-master\src\dataset.py:44: RuntimeWarning: invalid value encountered in divide
+  data_ratio = (y-x)/x  * 100 # 因为标签太小，增大一下
+D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\scipy\stats\_stats_py.py:4751: RuntimeWarning: invalid value encountered in subtract
+  ym = y - ymean
+Epoch 1/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.132292
+Best model saved at epoch 1
+Epoch 2/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.126042
+Epoch 3/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.129167
+Epoch 4/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.141667
+Best model saved at epoch 4
+Epoch 5/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.132292
+Epoch 6/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.138542
+Epoch 7/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.126042
+Epoch 8/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.141667
+Epoch 9/100, running_loss: nan, test_loss: nan, MSE: nan, IC: nan, RIC: nan, Precision@10: 0.129167

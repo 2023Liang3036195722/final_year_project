@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\GitHub\final_year_project\StockMixer-master\src\train.py", line 75, in train_test
+    data = np.load('normalize_data.npy')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\numpy\lib\_npyio_impl.py", line 451, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'normalize_data.npy'
