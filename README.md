@@ -37,7 +37,7 @@ Before you begin, ensure you have the following software installed on your machi
 
 Please follow these steps carefully to get the project up and running.
 
-*** 1. Clone the Repository ***
+### 1. Clone the Repository
 
 First, open your terminal or command prompt and clone this repository to your local machine.
 
