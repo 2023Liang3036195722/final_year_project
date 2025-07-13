@@ -46,72 +46,70 @@ git clone https://github.com/your-username/your-repository-name.git
 cd stockcode
 ```
 
-# Navigate to the backend directory
-```
-cd backend
-```
+### 2. Backend Setup & Launch
 
-# Create and activate a Python virtual environment (recommended)
-# On Windows:
-```
-python -m venv venv
-.\venv\Scripts\activate
-```
+First, set up and run the backend server.
 
-# On macOS / Linux:
-```
-python3 -m venv venv
-source venv/bin/activate
-```
+1.  **Navigate to the backend directory:**
+    ```bash
+    cd backend
+    ```
 
-# Install all required Python packages
-```
-pip install -r requirements.txt
-```
+2.  **Create and activate a Python virtual environment:**
+    *   On **Windows**:
+        ```bash
+        python -m venv venv
+        .\venv\Scripts\activate
+        ```
+    *   On **macOS / Linux**:
+        ```bash
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
 
-# (IMPORTANT) Configure Environment Variables
-# Create a file named .env in the backend/ directory.
-# You may need to copy from an .env.example if one exists.
-# Add any necessary configuration, such as API keys.
-# Example .env content:
-# API_KEY=YOUR_SECRET_API_KEY
-# DATABASE_URL=sqlite:///stock_data.db
+3.  **Install all required Python packages:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# Run the database initialization script (if applicable)
-python create_db.py
+4.  **(IMPORTANT) Configure Environment Variables:**
+    Create a file named `.env` in the `backend/` directory. You may need to copy from an `.env.example` if one exists. Add any necessary configuration, such as API keys.
+    
+    *Example `.env` content:*
+    ```
+    API_KEY="YOUR_SECRET_API_KEY"
+    DATABASE_URL="sqlite:///stock_data.db"
+    ```
 
-# Start the backend server
-python app.py
+5.  **Start the backend server:**
+    ```bash
+    python app.py
+    ```
+    > Keep this terminal window open. The backend server needs to be running for the frontend to work.
 
-# From the root directory (stockcode/), navigate to the frontend directory
-cd frontend
+### 3. Frontend Setup & Launch
 
-# Install all Node.js dependencies
-# This might take a few minutes
-npm install
+Now, in a **new terminal window**, set up and run the frontend application.
 
-# Start the frontend development server
-npm start
+1.  **Navigate to the frontend directory (from the root `stockcode/` folder):**
+    ```bash
+    cd frontend
+    ```
+
+2.  **Install all Node.js dependencies:**
+    This might take a few minutes.
+    ```bash
+    npm install
+    ```
+
+3.  **Start the frontend development server:**
+    ```bash
+    npm start
+    ```
 
 ## 🎉 All Set!
-Your development environment is now fully configured. The frontend application will communicate with the backend API to fetch and display data.
 
-## 📝 Project Structure for Your View
+Your development environment is now fully configured. The frontend application (usually at `http://localhost:3000`) will communicate with the backend API to fetch and display data.
 
-stockcode/
-├── backend/           
-│   ├── .env            # Environment variables 
-│   ├── app.py          # Main application entry point (Flask/FastAPI)
-│   ├── requirements.txt# Python dependencies list
-│   └── ...             # Other business logic, scrapers, etc.
-│
-└── frontend/           # All frontend code
-    ├── node_modules/   # Node.js dependencies (auto-generated)
-    ├── public/         # Static assets like index.html and icons
-    ├── src/            # React source code
-    │   ├── components/ # Reusable React components
-    │   ├── App.js      # Main App component
-    │   └── ...
-    ├── package.json    # Frontend dependencies and script configuration
-    └── ...
+
 
