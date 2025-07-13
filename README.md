@@ -37,28 +37,37 @@ Before you begin, ensure you have the following software installed on your machi
 
 Please follow these steps carefully to get the project up and running.
 
-### 1. Clone the Repository
+*** 1. Clone the Repository ***
 
 First, open your terminal or command prompt and clone this repository to your local machine.
 
 ```bash
 git clone https://github.com/your-username/your-repository-name.git
 cd stockcode
+```
 
 # Navigate to the backend directory
+```
 cd backend
+```
 
 # Create and activate a Python virtual environment (recommended)
 # On Windows:
+```
 python -m venv venv
 .\venv\Scripts\activate
+```
 
 # On macOS / Linux:
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 
 # Install all required Python packages
+```
 pip install -r requirements.txt
+```
 
 # (IMPORTANT) Configure Environment Variables
 # Create a file named .env in the backend/ directory.
