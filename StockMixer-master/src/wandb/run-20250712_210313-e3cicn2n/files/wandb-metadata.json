@@ -1,0 +1,43 @@
+{
+  "os":  "Windows-11-10.0.26100-SP0",
+  "python":  "CPython 3.12.3",
+  "startedAt":  "2025-07-12T13:03:14.187402Z",
+  "program":  "D:\\GitHub\\final_year_project\\StockMixer-master\\src\\train.py",
+  "codePath":  "StockMixer-master\\src\\train.py",
+  "git":  {
+    "remote":  "https://github.com/2023Liang3036195722/final_year_project.git",
+    "commit":  "ac1e41bc3dca4313d106955cc77c265055089d42"
+  },
+  "email":  "u3638178@connect.hku.hk",
+  "root":  "D:\\GitHub\\final_year_project\\StockMixer-master\\src",
+  "host":  "Computer0907",
+  "executable":  "D:\\GitHub\\final_year_project\\StockMixer-master\\venv\\Scripts\\python.exe",
+  "codePathLocal":  "train.py",
+  "cpu_count":  20,
+  "cpu_count_logical":  28,
+  "gpu":  "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "699697983488",
+      "used":  "280414224384"
+    }
+  },
+  "memory":  {
+    "total":  "16873545728"
+  },
+  "cpu":  {
+    "count":  20,
+    "countLogical":  28
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "memoryTotal":  "8585740288",
+      "cudaCores":  4608,
+      "architecture":  "Ada",
+      "uuid":  "GPU-4c2ee5a5-1ed9-4a30-a30e-946c48463ea6"
+    }
+  ],
+  "cudaVersion":  "12.7"
+}

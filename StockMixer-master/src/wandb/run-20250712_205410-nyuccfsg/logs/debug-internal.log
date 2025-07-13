@@ -1,0 +1,16 @@
+{"time":"2025-07-12T20:54:10.6390517+08:00","level":"INFO","msg":"stream: starting","core version":"0.20.2rc20250616"}
+{"time":"2025-07-12T20:54:11.3206505+08:00","level":"INFO","msg":"stream: created new stream","id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:11.3206505+08:00","level":"INFO","msg":"stream: started","id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:11.3206505+08:00","level":"INFO","msg":"sender: started","stream_id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:11.3206505+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:11.3206505+08:00","level":"INFO","msg":"handler: started","stream_id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:11.6351331+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-12T20:54:11.8714534+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-12T20:54:11.8714534+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-12T20:54:12.8749018+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading requirements.txt","runtime_seconds":0.9112924,"progress":"927B/927B"},{"desc":"uploading output.log","runtime_seconds":0.692956,"progress":"1.7KB/1.7KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.692956,"progress":"24B/24B"},{"desc":"uploading wandb-metadata.json","runtime_seconds":0.577992,"progress":"1.2KB/1.2KB"},{"desc":"uploading config.yaml","runtime_seconds":0.4139755,"progress":"513B/513B"}],"total_operations":5}}
+{"time":"2025-07-12T20:54:13.3409595+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-12T20:54:13.624556+08:00","level":"INFO","msg":"stream: closing","id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:13.624556+08:00","level":"INFO","msg":"handler: closed","stream_id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:13.624556+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:13.624556+08:00","level":"INFO","msg":"sender: closed","stream_id":"nyuccfsg"}
+{"time":"2025-07-12T20:54:13.624556+08:00","level":"INFO","msg":"stream: closed","id":"nyuccfsg"}

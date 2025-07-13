@@ -1,0 +1,29 @@
+2025-07-12 21:23:12,700 INFO    Thread-29 (_run_job):29640 [wandb_setup.py:_flush():80] Current SDK version is 0.20.2rc20250616
+2025-07-12 21:23:12,701 INFO    Thread-29 (_run_job):29640 [wandb_setup.py:_flush():80] Configure stats pid to 29640
+2025-07-12 21:23:12,701 INFO    Thread-29 (_run_job):29640 [wandb_setup.py:_flush():80] Loading settings from C:\Users\15841\.config\wandb\settings
+2025-07-12 21:23:12,701 INFO    Thread-29 (_run_job):29640 [wandb_setup.py:_flush():80] Loading settings from D:\GitHub\final_year_project\StockMixer-master\src\wandb\settings
+2025-07-12 21:23:12,701 INFO    Thread-29 (_run_job):29640 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-07-12 21:23:12,701 INFO    Thread-29 (_run_job):29640 [wandb_init.py:setup_run_log_directory():703] Logging user logs to D:\GitHub\final_year_project\StockMixer-master\src\wandb\run-20250712_212312-d1rpvm95\logs\debug.log
+2025-07-12 21:23:12,705 INFO    Thread-29 (_run_job):29640 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to D:\GitHub\final_year_project\StockMixer-master\src\wandb\run-20250712_212312-d1rpvm95\logs\debug-internal.log
+2025-07-12 21:23:12,705 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():831] calling init triggers
+2025-07-12 21:23:12,705 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():836] wandb.init called with sweep_config: {'hyper_m': 20, 'lr': 0.02699898946834009, 'weight_decay': 3.711989966387e-05}
+config: {'_wandb': {}}
+2025-07-12 21:23:12,705 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():872] starting backend
+2025-07-12 21:23:13,623 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():875] sending inform_init request
+2025-07-12 21:23:13,623 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():883] backend started and connected
+2025-07-12 21:23:13,629 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_config_callback():1358] config_cb None None {'hyper_m': 20, 'lr': 0.02699898946834009, 'weight_decay': 3.711989966387e-05}
+2025-07-12 21:23:13,630 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():954] updated telemetry
+2025-07-12 21:23:15,015 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():978] communicating run to backend with 90.0 second timeout
+2025-07-12 21:23:15,366 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():1030] starting run threads in backend
+2025-07-12 21:23:15,508 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_console_start():2453] atexit reg
+2025-07-12 21:23:15,508 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2025-07-12 21:23:15,508 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-07-12 21:23:15,508 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_redirect():2393] Redirects installed.
+2025-07-12 21:23:15,508 INFO    Thread-29 (_run_job):29640 [wandb_init.py:init():1076] run started, returning control to user process
+2025-07-12 21:25:14,636 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_finish():2219] finishing run u3638178-the-university-of-hong-kong/stock/d1rpvm95
+2025-07-12 21:25:14,636 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_atexit_cleanup():2418] got exitcode: 0
+2025-07-12 21:25:14,636 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_restore():2400] restore
+2025-07-12 21:25:14,637 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_restore():2406] restore done
+2025-07-12 21:25:15,767 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_footer_history_summary_info():3993] rendering history
+2025-07-12 21:25:15,767 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_footer_history_summary_info():4025] rendering summary
+2025-07-12 21:25:15,767 INFO    Thread-29 (_run_job):29640 [wandb_run.py:_footer_sync_info():3954] logging synced files

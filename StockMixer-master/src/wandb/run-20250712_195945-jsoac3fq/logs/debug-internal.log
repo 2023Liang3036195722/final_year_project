@@ -1,0 +1,16 @@
+{"time":"2025-07-12T19:59:45.5942424+08:00","level":"INFO","msg":"stream: starting","core version":"0.20.2rc20250616"}
+{"time":"2025-07-12T19:59:46.3205965+08:00","level":"INFO","msg":"stream: created new stream","id":"jsoac3fq"}
+{"time":"2025-07-12T19:59:46.3205965+08:00","level":"INFO","msg":"stream: started","id":"jsoac3fq"}
+{"time":"2025-07-12T19:59:46.3205965+08:00","level":"INFO","msg":"sender: started","stream_id":"jsoac3fq"}
+{"time":"2025-07-12T19:59:46.3205965+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"jsoac3fq"}
+{"time":"2025-07-12T19:59:46.3205965+08:00","level":"INFO","msg":"handler: started","stream_id":"jsoac3fq"}
+{"time":"2025-07-12T19:59:46.562824+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-12T20:00:42.1525553+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-12T20:00:42.1525553+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-12T20:00:43.1691923+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.0684125,"progress":"511B/511B"}],"total_operations":1}}
+{"time":"2025-07-12T20:00:43.4033612+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-12T20:00:43.7408539+08:00","level":"INFO","msg":"stream: closing","id":"jsoac3fq"}
+{"time":"2025-07-12T20:00:43.7408539+08:00","level":"INFO","msg":"handler: closed","stream_id":"jsoac3fq"}
+{"time":"2025-07-12T20:00:43.7408539+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jsoac3fq"}
+{"time":"2025-07-12T20:00:43.7415442+08:00","level":"INFO","msg":"sender: closed","stream_id":"jsoac3fq"}
+{"time":"2025-07-12T20:00:43.7415442+08:00","level":"INFO","msg":"stream: closed","id":"jsoac3fq"}

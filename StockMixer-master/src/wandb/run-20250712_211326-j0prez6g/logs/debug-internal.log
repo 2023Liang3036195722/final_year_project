@@ -1,0 +1,7 @@
+{"time":"2025-07-12T21:13:27.1497326+08:00","level":"INFO","msg":"stream: starting","core version":"0.20.2rc20250616"}
+{"time":"2025-07-12T21:13:28.3478596+08:00","level":"INFO","msg":"stream: created new stream","id":"j0prez6g"}
+{"time":"2025-07-12T21:13:28.3478596+08:00","level":"INFO","msg":"stream: started","id":"j0prez6g"}
+{"time":"2025-07-12T21:13:28.3478596+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"j0prez6g"}
+{"time":"2025-07-12T21:13:28.3486556+08:00","level":"INFO","msg":"handler: started","stream_id":"j0prez6g"}
+{"time":"2025-07-12T21:13:28.3486556+08:00","level":"INFO","msg":"sender: started","stream_id":"j0prez6g"}
+{"time":"2025-07-12T21:13:28.6586603+08:00","level":"INFO","msg":"Starting system monitor"}

@@ -132,7 +132,7 @@ class StockMixer(nn.Module):
         return x
 
 
-def get_loss(outputs, labels, alpha=0.1):
+def get_loss(outputs, labels, alpha=5):
     """
     计算包含回归损失和排序损失的组合损失
 

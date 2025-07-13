@@ -1,0 +1,120 @@
+train_size: 647
+test_size: 72
+begin training...
+total train batches21
+total test_batches3
+Epoch 1/100, running_loss: 8.141144, test_loss: 10.042663, MSE: 9.916421, IC: 0.004428, RIC: -0.002505, Precision@10: 0.162500
+Best model saved at epoch 1 with test_loss: 10.042663
+Epoch 2/100, running_loss: 7.446430, test_loss: 12.188253, MSE: 12.132813, IC: -0.028314, RIC: -0.033202, Precision@10: 0.134375
+Epoch 3/100, running_loss: 7.959467, test_loss: 9.418220, MSE: 9.390470, IC: 0.015039, RIC: 0.005244, Precision@10: 0.151042
+Best model saved at epoch 3 with test_loss: 9.418220
+Epoch 4/100, running_loss: 7.402643, test_loss: 11.387740, MSE: 11.375732, IC: -0.017647, RIC: -0.010795, Precision@10: 0.135417
+Epoch 5/100, running_loss: 7.476102, test_loss: 9.975305, MSE: 9.971578, IC: 0.044941, RIC: 0.009739, Precision@10: 0.175000
+Epoch 6/100, running_loss: 7.426606, test_loss: 9.169815, MSE: 9.168216, IC: 0.010771, RIC: 0.011318, Precision@10: 0.167708
+Best model saved at epoch 6 with test_loss: 9.169815
+Epoch 7/100, running_loss: 7.699195, test_loss: 11.761798, MSE: 11.761159, IC: 0.032939, RIC: -0.001908, Precision@10: 0.153125
+Epoch 8/100, running_loss: 7.431049, test_loss: 10.541695, MSE: 10.541370, IC: -0.014789, RIC: -0.015034, Precision@10: 0.126042
+Epoch 9/100, running_loss: 7.394682, test_loss: 11.075214, MSE: 11.075006, IC: -0.024174, RIC: -0.014895, Precision@10: 0.146875
+Epoch 10/100, running_loss: 7.598855, test_loss: 10.520094, MSE: 10.519807, IC: -0.008564, RIC: -0.022266, Precision@10: 0.148958
+Epoch 11/100, running_loss: 7.425494, test_loss: 14.459569, MSE: 14.459455, IC: 0.024381, RIC: 0.008875, Precision@10: 0.142708
+Epoch 12/100, running_loss: 7.332657, test_loss: 9.327912, MSE: 9.327811, IC: -0.002424, RIC: 0.005589, Precision@10: 0.117708
+Epoch 13/100, running_loss: 7.388891, test_loss: 9.474179, MSE: 9.473533, IC: 0.014288, RIC: 0.025428, Precision@10: 0.129167
+Epoch 14/100, running_loss: 7.485022, test_loss: 12.570797, MSE: 12.570659, IC: -0.013901, RIC: -0.005085, Precision@10: 0.123958
+Epoch 15/100, running_loss: 7.573279, test_loss: 9.872931, MSE: 9.872486, IC: -0.014391, RIC: -0.015844, Precision@10: 0.104167
+Epoch 16/100, running_loss: 7.456788, test_loss: 9.547968, MSE: 9.547466, IC: -0.010162, RIC: 0.002774, Precision@10: 0.065625
+Epoch 17/100, running_loss: 7.439976, test_loss: 10.024263, MSE: 10.023956, IC: -0.001620, RIC: -0.019371, Precision@10: 0.120833
+Epoch 18/100, running_loss: 7.403320, test_loss: 13.155548, MSE: 13.155536, IC: 0.059461, RIC: 0.024113, Precision@10: 0.168750
+Epoch 19/100, running_loss: 7.461465, test_loss: 10.222288, MSE: 10.222264, IC: 0.023072, RIC: 0.010420, Precision@10: 0.104167
+Epoch 20/100, running_loss: 7.348812, test_loss: 9.766406, MSE: 9.765885, IC: 0.039519, RIC: 0.054372, Precision@10: 0.102083
+Epoch 21/100, running_loss: 7.413840, test_loss: 9.151268, MSE: 9.150977, IC: 0.007373, RIC: 0.004190, Precision@10: 0.123958
+Best model saved at epoch 21 with test_loss: 9.151268
+Epoch 22/100, running_loss: 7.425873, test_loss: 11.417018, MSE: 11.416835, IC: 0.032173, RIC: 0.028453, Precision@10: 0.109375
+Epoch 23/100, running_loss: 7.461468, test_loss: 10.789742, MSE: 10.788501, IC: -0.005385, RIC: 0.014920, Precision@10: 0.133333
+Epoch 24/100, running_loss: 7.383759, test_loss: 9.629681, MSE: 9.627557, IC: -0.016889, RIC: -0.016851, Precision@10: 0.142708
+Epoch 25/100, running_loss: 7.916034, test_loss: 12.138844, MSE: 12.132259, IC: 0.024113, RIC: 0.004585, Precision@10: 0.159375
+Epoch 26/100, running_loss: 7.431354, test_loss: 10.268384, MSE: 10.263925, IC: 0.007090, RIC: 0.001549, Precision@10: 0.109375
+Epoch 27/100, running_loss: 7.914494, test_loss: 9.316913, MSE: 9.302996, IC: -0.013573, RIC: -0.009817, Precision@10: 0.084375
+Epoch 28/100, running_loss: 7.429775, test_loss: 9.919134, MSE: 9.912883, IC: 0.003629, RIC: 0.008616, Precision@10: 0.100000
+Epoch 29/100, running_loss: 7.444666, test_loss: 10.324015, MSE: 10.317054, IC: 0.000514, RIC: 0.000651, Precision@10: 0.088542
+Epoch 30/100, running_loss: 7.642956, test_loss: 13.970840, MSE: 13.963829, IC: -0.026750, RIC: -0.007191, Precision@10: 0.106250
+Epoch 31/100, running_loss: 7.489963, test_loss: 9.789053, MSE: 9.786386, IC: -0.006714, RIC: 0.001826, Precision@10: 0.090625
+Epoch 32/100, running_loss: 7.401882, test_loss: 10.046300, MSE: 10.045075, IC: -0.001138, RIC: 0.000235, Precision@10: 0.128125
+Epoch 33/100, running_loss: 7.679869, test_loss: 12.091762, MSE: 12.091571, IC: -0.016930, RIC: -0.024150, Precision@10: 0.130208
+Epoch 34/100, running_loss: 7.533413, test_loss: 10.327477, MSE: 10.327354, IC: 0.010320, RIC: 0.006766, Precision@10: 0.121875
+Epoch 35/100, running_loss: 7.350631, test_loss: 10.033607, MSE: 10.032954, IC: -0.004195, RIC: -0.011537, Precision@10: 0.112500
+Epoch 36/100, running_loss: 7.456404, test_loss: 13.348990, MSE: 13.348927, IC: 0.024703, RIC: 0.027614, Precision@10: 0.122917
+Epoch 37/100, running_loss: 7.509670, test_loss: 13.525547, MSE: 13.525081, IC: 0.019188, RIC: 0.011535, Precision@10: 0.105208
+Epoch 38/100, running_loss: 7.426372, test_loss: 9.818625, MSE: 9.818223, IC: 0.004657, RIC: -0.003200, Precision@10: 0.129167
+Epoch 39/100, running_loss: 7.426954, test_loss: 11.169232, MSE: 11.169024, IC: -0.021111, RIC: -0.017836, Precision@10: 0.134375
+Epoch 40/100, running_loss: 7.552800, test_loss: 11.780922, MSE: 11.780377, IC: -0.019316, RIC: -0.022074, Precision@10: 0.126042
+Epoch 41/100, running_loss: 7.387751, test_loss: 11.516739, MSE: 11.516339, IC: -0.022915, RIC: -0.009926, Precision@10: 0.138542
+Epoch 42/100, running_loss: 7.414738, test_loss: 11.015715, MSE: 11.012746, IC: -0.012719, RIC: -0.018725, Precision@10: 0.122917
+Epoch 43/100, running_loss: 7.411594, test_loss: 14.914013, MSE: 14.911378, IC: 0.008481, RIC: -0.006103, Precision@10: 0.134375
+Epoch 44/100, running_loss: 7.431154, test_loss: 11.725262, MSE: 11.708861, IC: -0.009656, RIC: -0.007889, Precision@10: 0.110417
+Epoch 45/100, running_loss: 7.534020, test_loss: 11.025111, MSE: 11.022588, IC: 0.011382, RIC: -0.001828, Precision@10: 0.123958
+Epoch 46/100, running_loss: 7.441424, test_loss: 14.527458, MSE: 14.523759, IC: 0.019996, RIC: 0.016704, Precision@10: 0.095833
+Epoch 47/100, running_loss: 7.442374, test_loss: 10.459084, MSE: 10.454329, IC: 0.030719, RIC: 0.033323, Precision@10: 0.165625
+Epoch 48/100, running_loss: 8.615580, test_loss: 10.052648, MSE: 10.017430, IC: -0.009301, RIC: -0.012187, Precision@10: 0.156250
+Epoch 49/100, running_loss: 7.884370, test_loss: 15.720984, MSE: 15.635238, IC: 0.019424, RIC: 0.028109, Precision@10: 0.119792
+Epoch 50/100, running_loss: 8.575469, test_loss: 13.947945, MSE: 13.902321, IC: -0.017791, RIC: -0.022251, Precision@10: 0.086458
+Epoch 51/100, running_loss: 7.526290, test_loss: 13.594048, MSE: 13.579654, IC: 0.007687, RIC: 0.013507, Precision@10: 0.109375
+Epoch 52/100, running_loss: 7.399830, test_loss: 9.945157, MSE: 9.932218, IC: 0.005816, RIC: -0.004424, Precision@10: 0.134375
+Epoch 53/100, running_loss: 7.449126, test_loss: 11.135033, MSE: 11.131310, IC: 0.008524, RIC: -0.001436, Precision@10: 0.125000
+Epoch 54/100, running_loss: 7.461567, test_loss: 9.926190, MSE: 9.925627, IC: 0.006469, RIC: 0.015241, Precision@10: 0.140625
+Epoch 55/100, running_loss: 7.411168, test_loss: 9.799763, MSE: 9.799457, IC: -0.010364, RIC: -0.011264, Precision@10: 0.093750
+Epoch 56/100, running_loss: 7.526456, test_loss: 13.324253, MSE: 13.324170, IC: 0.013395, RIC: 0.021747, Precision@10: 0.112500
+Epoch 57/100, running_loss: 7.448104, test_loss: 10.140514, MSE: 10.140452, IC: 0.010731, RIC: 0.010389, Precision@10: 0.146875
+Epoch 58/100, running_loss: 7.362289, test_loss: 14.570803, MSE: 14.570782, IC: -0.009389, RIC: -0.020869, Precision@10: 0.142708
+Epoch 59/100, running_loss: 7.371787, test_loss: 10.514612, MSE: 10.514601, IC: 0.012247, RIC: 0.013575, Precision@10: 0.102083
+Epoch 60/100, running_loss: 7.512985, test_loss: 13.177953, MSE: 13.177930, IC: 0.002761, RIC: 0.007102, Precision@10: 0.111458
+Epoch 61/100, running_loss: 7.428861, test_loss: 10.817142, MSE: 10.817138, IC: 0.005247, RIC: 0.005142, Precision@10: 0.133333
+Epoch 62/100, running_loss: 7.467579, test_loss: 10.810733, MSE: 10.810658, IC: 0.001679, RIC: -0.002922, Precision@10: 0.123958
+Epoch 63/100, running_loss: 7.356978, test_loss: 10.459495, MSE: 10.459454, IC: -0.012374, RIC: 0.003238, Precision@10: 0.121875
+Epoch 64/100, running_loss: 7.489726, test_loss: 10.141484, MSE: 10.141480, IC: 0.016059, RIC: 0.016029, Precision@10: 0.117708
+Epoch 65/100, running_loss: 7.355186, test_loss: 10.685850, MSE: 10.685841, IC: -0.014061, RIC: -0.023150, Precision@10: 0.125000
+Epoch 66/100, running_loss: 7.429666, test_loss: 10.572710, MSE: 10.572705, IC: 0.010942, RIC: 0.010268, Precision@10: 0.146875
+Epoch 67/100, running_loss: 7.402335, test_loss: 11.903569, MSE: 11.903554, IC: -0.006644, RIC: 0.003248, Precision@10: 0.107292
+Epoch 68/100, running_loss: 7.569657, test_loss: 10.635543, MSE: 10.635516, IC: -0.003461, RIC: -0.006455, Precision@10: 0.142708
+Epoch 69/100, running_loss: 7.442577, test_loss: 10.196324, MSE: 10.196266, IC: -0.001851, RIC: -0.010376, Precision@10: 0.121875
+Epoch 70/100, running_loss: 7.706029, test_loss: 11.657327, MSE: 11.657112, IC: -0.031422, RIC: -0.025248, Precision@10: 0.125000
+Traceback (most recent call last):
+  File "D:\GitHub\final_year_project\StockMixer-master\src\train.py", line 116, in train_test
+    outputs = model(inputs)
+              ^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\src\model.py", line 121, in forward
+    h_k = self.time_mixer[i](x_k)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\src\model.py", line 72, in forward
+    x = self.u2(x)
+        ^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\src\model.py", line 53, in forward
+    x = torch.cat([x, self.triU[i](inputs[:, 0:i+1])], dim=-1)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GitHub\final_year_project\StockMixer-master\venv\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception

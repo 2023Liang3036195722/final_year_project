@@ -38,9 +38,10 @@ if __name__ == '__main__':
     x = data[:, 25, -1]
     y = data[:, 26, -1]
     predict_result = predict(timesteps)
-    true_result = (y-x)/x
+    true_result = (y-x)/x*100
     print('predict:',predict_result)
     print('true:',true_result)
+    print('x:',x)
 
 
 

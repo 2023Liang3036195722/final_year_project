@@ -1,0 +1,16 @@
+{"time":"2025-07-12T20:06:26.4059115+08:00","level":"INFO","msg":"stream: starting","core version":"0.20.2rc20250616"}
+{"time":"2025-07-12T20:06:27.6138915+08:00","level":"INFO","msg":"stream: created new stream","id":"ehrkopf0"}
+{"time":"2025-07-12T20:06:27.6138915+08:00","level":"INFO","msg":"stream: started","id":"ehrkopf0"}
+{"time":"2025-07-12T20:06:27.6138915+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"ehrkopf0"}
+{"time":"2025-07-12T20:06:27.6144612+08:00","level":"INFO","msg":"handler: started","stream_id":"ehrkopf0"}
+{"time":"2025-07-12T20:06:27.6144612+08:00","level":"INFO","msg":"sender: started","stream_id":"ehrkopf0"}
+{"time":"2025-07-12T20:06:27.8827207+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-12T20:07:10.418112+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-12T20:07:10.418112+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-12T20:07:11.2121321+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-12T20:07:11.433591+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 68-99, summary, console lines 75-106","runtime_seconds":0.2214589}],"total_operations":1}}
+{"time":"2025-07-12T20:07:11.516948+08:00","level":"INFO","msg":"stream: closing","id":"ehrkopf0"}
+{"time":"2025-07-12T20:07:11.516948+08:00","level":"INFO","msg":"handler: closed","stream_id":"ehrkopf0"}
+{"time":"2025-07-12T20:07:11.516948+08:00","level":"INFO","msg":"sender: closed","stream_id":"ehrkopf0"}
+{"time":"2025-07-12T20:07:11.516948+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ehrkopf0"}
+{"time":"2025-07-12T20:07:11.516948+08:00","level":"INFO","msg":"stream: closed","id":"ehrkopf0"}

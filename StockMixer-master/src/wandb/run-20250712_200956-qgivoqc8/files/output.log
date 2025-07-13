@@ -1,0 +1,110 @@
+train_size: 647
+test_size: 72
+begin training...
+total train batches21
+total test_batches3
+Epoch 1/100, running_loss: 7.616727, test_loss: 11.252048, MSE: 11.238814, IC: 0.000437, RIC: 0.007303, Precision@10: 0.135417
+Best model saved at epoch 1 with test_loss: 11.252048
+Epoch 2/100, running_loss: 7.976326, test_loss: 12.423311, MSE: 12.381455, IC: -0.004964, RIC: -0.015929, Precision@10: 0.118750
+Epoch 3/100, running_loss: 7.477532, test_loss: 9.669935, MSE: 9.653125, IC: 0.013037, RIC: 0.025600, Precision@10: 0.162500
+Best model saved at epoch 3 with test_loss: 9.669935
+Epoch 4/100, running_loss: 7.365208, test_loss: 9.908004, MSE: 9.882527, IC: 0.019202, RIC: 0.029786, Precision@10: 0.144792
+Epoch 5/100, running_loss: 7.395185, test_loss: 10.546412, MSE: 10.530467, IC: 0.025653, RIC: 0.036294, Precision@10: 0.125000
+Epoch 6/100, running_loss: 7.440008, test_loss: 11.181066, MSE: 11.142705, IC: 0.043429, RIC: 0.045964, Precision@10: 0.172917
+Epoch 7/100, running_loss: 7.446475, test_loss: 10.005313, MSE: 9.970159, IC: -0.013549, RIC: -0.009781, Precision@10: 0.105208
+Epoch 8/100, running_loss: 7.479255, test_loss: 13.598704, MSE: 13.564598, IC: -0.010357, RIC: -0.002830, Precision@10: 0.127083
+Epoch 9/100, running_loss: 7.452011, test_loss: 10.931653, MSE: 10.866645, IC: 0.043730, RIC: 0.045857, Precision@10: 0.128125
+Epoch 10/100, running_loss: 7.709423, test_loss: 11.230477, MSE: 11.209500, IC: 0.000785, RIC: 0.003280, Precision@10: 0.140625
+Epoch 11/100, running_loss: 7.364964, test_loss: 10.314644, MSE: 10.309056, IC: -0.003857, RIC: 0.025570, Precision@10: 0.144792
+Epoch 12/100, running_loss: 7.431565, test_loss: 10.364417, MSE: 10.359223, IC: 0.020829, RIC: 0.038643, Precision@10: 0.144792
+Epoch 13/100, running_loss: 7.478949, test_loss: 12.925690, MSE: 12.922028, IC: 0.045614, RIC: 0.010049, Precision@10: 0.160417
+Epoch 14/100, running_loss: 7.394775, test_loss: 10.870932, MSE: 10.863727, IC: 0.017332, RIC: 0.016978, Precision@10: 0.175000
+Epoch 15/100, running_loss: 7.465127, test_loss: 10.271622, MSE: 10.262361, IC: 0.008158, RIC: 0.041373, Precision@10: 0.190625
+Epoch 16/100, running_loss: 7.529281, test_loss: 11.352948, MSE: 11.343826, IC: 0.029034, RIC: 0.036612, Precision@10: 0.154167
+Epoch 17/100, running_loss: 7.376316, test_loss: 9.498298, MSE: 9.490869, IC: 0.020279, RIC: 0.022598, Precision@10: 0.152083
+Best model saved at epoch 17 with test_loss: 9.498298
+Epoch 18/100, running_loss: 7.562115, test_loss: 12.277545, MSE: 12.269435, IC: 0.022490, RIC: 0.009762, Precision@10: 0.164583
+Epoch 19/100, running_loss: 7.536490, test_loss: 17.771329, MSE: 17.754082, IC: 0.022477, RIC: -0.017614, Precision@10: 0.168750
+Epoch 20/100, running_loss: 7.471644, test_loss: 13.044420, MSE: 13.021767, IC: 0.038922, RIC: 0.035160, Precision@10: 0.193750
+Epoch 21/100, running_loss: 7.396478, test_loss: 12.516212, MSE: 12.508354, IC: 0.008975, RIC: -0.002214, Precision@10: 0.162500
+Epoch 22/100, running_loss: 7.450479, test_loss: 12.418112, MSE: 12.406232, IC: 0.035537, RIC: 0.025650, Precision@10: 0.158333
+Epoch 23/100, running_loss: 7.477487, test_loss: 12.002261, MSE: 11.992092, IC: 0.023908, RIC: 0.014047, Precision@10: 0.165625
+Epoch 24/100, running_loss: 7.407624, test_loss: 12.464577, MSE: 12.453911, IC: 0.038772, RIC: -0.014999, Precision@10: 0.159375
+Epoch 25/100, running_loss: 7.483525, test_loss: 10.267178, MSE: 10.248330, IC: 0.019242, RIC: 0.000670, Precision@10: 0.159375
+Epoch 26/100, running_loss: 7.419555, test_loss: 9.607986, MSE: 9.599378, IC: 0.036487, RIC: 0.036810, Precision@10: 0.166667
+Epoch 27/100, running_loss: 7.342834, test_loss: 9.515343, MSE: 9.498568, IC: 0.011477, RIC: -0.000059, Precision@10: 0.179167
+Epoch 28/100, running_loss: 7.596819, test_loss: 9.864321, MSE: 9.853412, IC: 0.024348, RIC: 0.017554, Precision@10: 0.154167
+Epoch 29/100, running_loss: 7.464541, test_loss: 10.151190, MSE: 10.139688, IC: 0.053449, RIC: 0.038445, Precision@10: 0.171875
+Epoch 30/100, running_loss: 7.368271, test_loss: 10.500574, MSE: 10.488178, IC: 0.032830, RIC: -0.003807, Precision@10: 0.189583
+Epoch 31/100, running_loss: 7.443876, test_loss: 10.569187, MSE: 10.552178, IC: 0.038785, RIC: 0.038653, Precision@10: 0.159375
+Epoch 32/100, running_loss: 7.354798, test_loss: 10.137148, MSE: 10.126155, IC: 0.033990, RIC: 0.035771, Precision@10: 0.145833
+Epoch 33/100, running_loss: 7.486985, test_loss: 9.268993, MSE: 9.250894, IC: 0.018702, RIC: -0.017898, Precision@10: 0.172917
+Best model saved at epoch 33 with test_loss: 9.268993
+Epoch 34/100, running_loss: 7.456985, test_loss: 14.859494, MSE: 14.844822, IC: 0.058081, RIC: 0.031635, Precision@10: 0.157292
+Epoch 35/100, running_loss: 8.045531, test_loss: 11.088201, MSE: 11.075036, IC: 0.059303, RIC: 0.009776, Precision@10: 0.173958
+Epoch 36/100, running_loss: 7.390315, test_loss: 12.664617, MSE: 12.651299, IC: 0.029118, RIC: 0.005040, Precision@10: 0.182292
+Epoch 37/100, running_loss: 7.359431, test_loss: 11.159373, MSE: 11.150371, IC: 0.045276, RIC: 0.012426, Precision@10: 0.165625
+Epoch 38/100, running_loss: 7.523968, test_loss: 10.752619, MSE: 10.738103, IC: 0.058013, RIC: 0.047507, Precision@10: 0.148958
+Epoch 39/100, running_loss: 7.558915, test_loss: 10.543062, MSE: 10.528326, IC: 0.045366, RIC: 0.021198, Precision@10: 0.176042
+Epoch 40/100, running_loss: 7.548748, test_loss: 13.608479, MSE: 13.562499, IC: 0.022832, RIC: 0.023645, Precision@10: 0.139583
+Epoch 41/100, running_loss: 7.679499, test_loss: 9.935153, MSE: 9.922561, IC: 0.043720, RIC: 0.037928, Precision@10: 0.164583
+Epoch 42/100, running_loss: 7.478122, test_loss: 10.246855, MSE: 10.236082, IC: 0.071092, RIC: 0.057037, Precision@10: 0.173958
+Epoch 43/100, running_loss: 7.438226, test_loss: 9.379451, MSE: 9.365909, IC: 0.041347, RIC: 0.025148, Precision@10: 0.183333
+Epoch 44/100, running_loss: 7.441939, test_loss: 12.543640, MSE: 12.521855, IC: -0.012786, RIC: -0.009915, Precision@10: 0.118750
+Epoch 45/100, running_loss: 7.369597, test_loss: 11.506627, MSE: 11.490192, IC: 0.033844, RIC: 0.013379, Precision@10: 0.179167
+Epoch 46/100, running_loss: 7.709493, test_loss: 10.407196, MSE: 10.321117, IC: -0.006364, RIC: -0.005685, Precision@10: 0.119792
+Epoch 47/100, running_loss: 8.113014, test_loss: 13.409488, MSE: 13.380416, IC: 0.029171, RIC: 0.040671, Precision@10: 0.100000
+Epoch 48/100, running_loss: 7.513620, test_loss: 10.262571, MSE: 10.240425, IC: -0.000736, RIC: -0.010083, Precision@10: 0.144792
+Epoch 49/100, running_loss: 8.538582, test_loss: 9.331716, MSE: 9.326171, IC: 0.052635, RIC: 0.038649, Precision@10: 0.190625
+Epoch 50/100, running_loss: 7.518463, test_loss: 10.506538, MSE: 10.499177, IC: 0.023038, RIC: 0.017871, Precision@10: 0.193750
+Epoch 51/100, running_loss: 7.499793, test_loss: 13.318738, MSE: 13.309807, IC: 0.038354, RIC: 0.017471, Precision@10: 0.171875
+Epoch 52/100, running_loss: 7.536182, test_loss: 9.996212, MSE: 9.985869, IC: 0.050346, RIC: 0.042554, Precision@10: 0.184375
+Epoch 53/100, running_loss: 7.319166, test_loss: 10.508250, MSE: 10.497101, IC: 0.055807, RIC: 0.039231, Precision@10: 0.176042
+Epoch 54/100, running_loss: 7.419278, test_loss: 10.297772, MSE: 10.288490, IC: 0.041328, RIC: 0.029556, Precision@10: 0.206250
+Epoch 55/100, running_loss: 7.422905, test_loss: 13.264599, MSE: 13.255286, IC: 0.054327, RIC: 0.041051, Precision@10: 0.201042
+Epoch 56/100, running_loss: 7.373506, test_loss: 9.446368, MSE: 9.436491, IC: 0.020998, RIC: 0.011052, Precision@10: 0.202083
+Epoch 57/100, running_loss: 7.406640, test_loss: 9.754328, MSE: 9.741355, IC: 0.051344, RIC: 0.038847, Precision@10: 0.185417
+Epoch 58/100, running_loss: 7.443228, test_loss: 13.533684, MSE: 13.519589, IC: 0.044947, RIC: 0.038049, Precision@10: 0.162500
+Epoch 59/100, running_loss: 7.368145, test_loss: 10.099240, MSE: 10.086894, IC: 0.034671, RIC: 0.011476, Precision@10: 0.166667
+Epoch 60/100, running_loss: 7.462707, test_loss: 13.760309, MSE: 13.746463, IC: 0.057738, RIC: 0.043746, Precision@10: 0.188542
+Epoch 61/100, running_loss: 7.363466, test_loss: 10.942241, MSE: 10.926163, IC: 0.023569, RIC: 0.016217, Precision@10: 0.176042
+Epoch 62/100, running_loss: 7.492693, test_loss: 10.785974, MSE: 10.773476, IC: 0.014976, RIC: -0.006676, Precision@10: 0.159375
+Epoch 63/100, running_loss: 7.405084, test_loss: 14.861154, MSE: 14.844533, IC: 0.034623, RIC: 0.019446, Precision@10: 0.173958
+Epoch 64/100, running_loss: 7.509500, test_loss: 9.409859, MSE: 9.396264, IC: 0.044020, RIC: 0.029529, Precision@10: 0.185417
+Epoch 65/100, running_loss: 7.418469, test_loss: 10.550192, MSE: 10.534181, IC: 0.046789, RIC: 0.029207, Precision@10: 0.187500
+Epoch 66/100, running_loss: 7.450823, test_loss: 12.571863, MSE: 12.554446, IC: 0.039036, RIC: 0.018227, Precision@10: 0.185417
+Epoch 67/100, running_loss: 7.360098, test_loss: 9.161461, MSE: 9.147681, IC: 0.042567, RIC: 0.051287, Precision@10: 0.183333
+Best model saved at epoch 67 with test_loss: 9.161461
+Epoch 68/100, running_loss: 7.428453, test_loss: 9.817420, MSE: 9.802383, IC: 0.028768, RIC: 0.023809, Precision@10: 0.171875
+Epoch 69/100, running_loss: 7.475201, test_loss: 9.964019, MSE: 9.946290, IC: 0.049697, RIC: 0.060193, Precision@10: 0.177083
+Epoch 70/100, running_loss: 7.929188, test_loss: 11.164005, MSE: 11.147824, IC: 0.013950, RIC: 0.029474, Precision@10: 0.156250
+Epoch 71/100, running_loss: 7.640511, test_loss: 9.865693, MSE: 9.850381, IC: 0.049240, RIC: 0.031682, Precision@10: 0.180208
+Epoch 72/100, running_loss: 7.378640, test_loss: 9.751031, MSE: 9.738639, IC: 0.079207, RIC: 0.026085, Precision@10: 0.190625
+Epoch 73/100, running_loss: 7.362920, test_loss: 10.237957, MSE: 10.223559, IC: 0.019785, RIC: 0.023727, Precision@10: 0.162500
+Epoch 74/100, running_loss: 7.335813, test_loss: 9.480726, MSE: 9.467294, IC: 0.064766, RIC: 0.064336, Precision@10: 0.188542
+Epoch 75/100, running_loss: 7.393934, test_loss: 9.430202, MSE: 9.409822, IC: 0.022402, RIC: 0.007258, Precision@10: 0.198958
+Epoch 76/100, running_loss: 7.417067, test_loss: 10.761472, MSE: 10.746343, IC: 0.053721, RIC: 0.036102, Precision@10: 0.198958
+Epoch 77/100, running_loss: 7.355678, test_loss: 11.348348, MSE: 11.332883, IC: 0.047217, RIC: 0.040087, Precision@10: 0.173958
+Epoch 78/100, running_loss: 7.388849, test_loss: 9.645214, MSE: 9.628693, IC: 0.045110, RIC: 0.035790, Precision@10: 0.182292
+Epoch 79/100, running_loss: 7.381898, test_loss: 11.991021, MSE: 11.973839, IC: 0.046547, RIC: 0.049092, Precision@10: 0.182292
+Epoch 80/100, running_loss: 7.411806, test_loss: 10.104400, MSE: 10.091792, IC: 0.051537, RIC: 0.029780, Precision@10: 0.190625
+Epoch 81/100, running_loss: 7.396785, test_loss: 12.212899, MSE: 12.193240, IC: 0.054133, RIC: 0.060942, Precision@10: 0.189583
+Epoch 82/100, running_loss: 7.382019, test_loss: 11.560788, MSE: 11.543614, IC: 0.064126, RIC: 0.048246, Precision@10: 0.168750
+Epoch 83/100, running_loss: 7.491066, test_loss: 13.749531, MSE: 13.732203, IC: 0.047348, RIC: 0.057987, Precision@10: 0.171875
+Epoch 84/100, running_loss: 7.534694, test_loss: 9.888786, MSE: 9.875553, IC: 0.054396, RIC: 0.041125, Precision@10: 0.180208
+Epoch 85/100, running_loss: 7.455579, test_loss: 9.220573, MSE: 9.207103, IC: 0.030791, RIC: 0.021694, Precision@10: 0.171875
+Epoch 86/100, running_loss: 7.650447, test_loss: 13.347946, MSE: 13.332637, IC: 0.001701, RIC: 0.000841, Precision@10: 0.173958
+Epoch 87/100, running_loss: 7.466672, test_loss: 11.850175, MSE: 11.831306, IC: 0.053546, RIC: 0.059515, Precision@10: 0.173958
+Epoch 88/100, running_loss: 7.416393, test_loss: 13.202748, MSE: 13.185722, IC: 0.029082, RIC: 0.040181, Precision@10: 0.160417
+Epoch 89/100, running_loss: 7.379264, test_loss: 10.062111, MSE: 10.041971, IC: 0.042179, RIC: 0.049751, Precision@10: 0.170833
+Epoch 90/100, running_loss: 7.502030, test_loss: 11.426008, MSE: 11.411561, IC: 0.053650, RIC: 0.051339, Precision@10: 0.180208
+Epoch 91/100, running_loss: 7.471658, test_loss: 12.286386, MSE: 12.268158, IC: 0.056671, RIC: 0.049816, Precision@10: 0.205208
+Epoch 92/100, running_loss: 7.392586, test_loss: 10.533310, MSE: 10.518642, IC: 0.085603, RIC: 0.073721, Precision@10: 0.198958
+Epoch 93/100, running_loss: 7.525474, test_loss: 10.705890, MSE: 10.690811, IC: 0.066026, RIC: 0.054253, Precision@10: 0.179167
+Epoch 94/100, running_loss: 7.386439, test_loss: 10.452664, MSE: 10.429675, IC: 0.048324, RIC: 0.069466, Precision@10: 0.151042
+Epoch 95/100, running_loss: 7.441506, test_loss: 11.954486, MSE: 11.940219, IC: 0.039372, RIC: 0.033642, Precision@10: 0.172917
+Epoch 96/100, running_loss: 7.479254, test_loss: 10.358723, MSE: 10.342402, IC: 0.045332, RIC: 0.043741, Precision@10: 0.162500
+Epoch 97/100, running_loss: 7.400467, test_loss: 9.507636, MSE: 9.492772, IC: 0.029497, RIC: 0.046950, Precision@10: 0.170833
+Epoch 98/100, running_loss: 7.419998, test_loss: 14.370670, MSE: 14.351430, IC: 0.056392, RIC: 0.042967, Precision@10: 0.135417
+Epoch 99/100, running_loss: 7.422920, test_loss: 11.518533, MSE: 11.503707, IC: 0.039701, RIC: 0.054208, Precision@10: 0.182292
+Epoch 100/100, running_loss: 7.426209, test_loss: 13.206130, MSE: 13.185048, IC: 0.000123, RIC: -0.023621, Precision@10: 0.161458

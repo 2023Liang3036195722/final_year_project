@@ -1,11 +1,11 @@
-import math
 import numpy as np
 import torch as torch
 from torch import nn, optim
 from torch.utils.data import DataLoader, Subset
-from model import StockMixer
-from dataset import HKStockDataset
+from model import StockMixer,get_loss
+from dataset import HKStockDataset_prices
 import wandb
+from scipy import stats
 
 
 if torch.cuda.is_available():
@@ -15,7 +15,31 @@ else:
     print("CUDA not available!")
     exit()
 
-def train(config=None):
+def compute_metrics(outputs, labels):
+    B, N = outputs.shape
+    outputs = outputs.cpu().numpy()
+    labels = labels.cpu().numpy()
+    # 1. 计算MSE（均方误差）
+    # 方法：先计算每个元素的平方差，再对所有元素取平均（或按批次平均后再取总平均）
+    mse = np.mean((outputs - labels) ** 2)
+    # 2. 计算平均Pearson相关系数
+    # 方法：对每个批次（B个）计算a和b的Pearson系数，再取平均值
+    # 注：scipy.stats.pearsonr返回（相关系数，p值），需提取相关系数
+    pearson_coeffs = [stats.pearsonr(outputs[i], labels[i])[0] for i in range(B)]
+    IC = np.mean(pearson_coeffs)
+    # 3. 计算平均Spearman相关系数
+    # 方法：类似Pearson，对每个批次计算Spearman系数后取平均
+    # 注：Spearman是基于排序的非参数相关系数
+    spearman_coeffs = [stats.spearmanr(outputs[i], labels[i])[0] for i in range(B)]
+    RIC = np.mean(spearman_coeffs)
+    # 4. 计算Precision@10
+    # 方法：对每个批次，找出outputs预测的前10个最大值的索引，计算这些索引在labels的前10个最大值索引中的比例
+    k = 10
+    precisions = [np.mean(np.isin(np.argsort(outputs[i])[-k:], np.argsort(labels[i])[-k:])) for i in range(B)]
+    prec_10 = np.mean(precisions)
+    return mse,IC,RIC,prec_10
+
+def train_test(config=None):
     with wandb.init(config=config):
         config = wandb.config
         lr = config.lr
@@ -48,8 +72,8 @@ def train(config=None):
         scale_factor = 3
 
 
-        data = np.load('stock_data1.npy')
-        dataset = HKStockDataset(data)
+        data = np.load('stock_data.npy')
+        dataset = HKStockDataset_prices(data)
 
         train_size = int(0.90 * len(dataset))
         print("train_size:", train_size)
@@ -70,7 +94,6 @@ def train(config=None):
             scale=scale_factor
         ).to(device)
 
-        criterion = nn.MSELoss()
         optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
         print('begin training...')
@@ -79,64 +102,105 @@ def train(config=None):
         print('total train batches'+str(total_train_batches))
         print('total test_batches'+str(total_test_batches))
 
-        model.train()
-        num_epochs = 100
-        for epoch in range(num_epochs):
-            running_loss = 0.0
 
-            # batch_idx = 0
-            for inputs, labels in train_dataloader:
-                # batch_idx += 1
-                inputs, labels = inputs.to(device), labels.to(device)
+        num_epochs = 100
+        best_prec_10 = 0
+
+        for epoch in range(num_epochs):
+            # train
+            model.train()
+            running_loss = 0.0
+            for data_input, data_ratio, data_base in train_dataloader:
+                data_input, data_ratio, data_base = data_input.to(device), data_ratio.to(device), data_base.to(device)
                 optimizer.zero_grad()
-                outputs = model(inputs)
-                loss = criterion(outputs, labels)
+                predict_prices = model(data_input)
+                predict_ratio = (predict_prices - data_base) / data_base * 100
+                loss = get_loss(predict_ratio, data_ratio)
                 loss.backward()
                 optimizer.step()
                 running_loss += loss.item()
-
-                # if batch_idx % 100 == 0:
-                #     print(f'Epoch {epoch + 1}/{num_epochs}, Batch {batch_idx}/{total_batches}, Loss: {loss.item():.6f}')
-
-            # 计算训练平均损失开方
-            avg_sqrt_train_loss = math.sqrt(running_loss / total_train_batches)
+            running_loss = running_loss / total_train_batches
 
             # test
             model.eval()
             test_loss = 0.0
+            mse_list, IC_list, RIC_list, prec_10_list = [], [], [], []
             with torch.no_grad():
-                for inputs, labels in test_dataloader:
-                    inputs, labels = inputs.to(device), labels.to(device)
-                    outputs = model(inputs)
-                    loss = criterion(outputs, labels)
+                for data_input, data_ratio, data_base in test_dataloader:
+                    data_input, data_ratio, data_base = data_input.to(device), data_ratio.to(device), data_base.to(device)
+                    predict_prices = model(data_input)
+                    predict_ratio = (predict_prices-data_base)/data_base*100
+                    loss = get_loss(predict_ratio, data_ratio)
                     test_loss += loss.item()
-            model.train()
+                    mse,IC,RIC,prec_10=compute_metrics(predict_ratio, data_ratio)
+                    mse_list.append(mse)
+                    IC_list.append(IC)
+                    RIC_list.append(RIC)
+                    prec_10_list.append(prec_10)
+            test_loss = test_loss / total_test_batches
+            mse = np.mean(mse_list)
+            IC = np.mean(IC_list)
+            RIC = np.mean(RIC_list)
+            prec_10 = np.mean(prec_10_list)
 
-            # 计算平均测试损失
-            avg_sqrt_test_loss = math.sqrt(test_loss / total_test_batches)
+            # 打印所有指标到控制台
+            print(f'Epoch {epoch + 1}/{num_epochs}, '
+                  f'running_loss: {running_loss:.6f}, '
+                  f'test_loss: {test_loss:.6f}, '
+                  f'MSE: {mse:.6f}, '
+                  f'IC: {IC:.6f}, '
+                  f'RIC: {RIC:.6f}, '
+                  f'Precision@10: {prec_10:.6f}')
 
-            print(f'Epoch {epoch + 1}/{num_epochs}, train_sqrt_loss: {avg_sqrt_train_loss:.6f},'
-                  f' test_sqrt_loss: {avg_sqrt_test_loss:.6f}')
-            wandb.log({"train_sqrt_loss": avg_sqrt_train_loss, "test_sqrt_loss": avg_sqrt_test_loss})
+            # 将所有指标同步到W&B
+            wandb.log({
+                "running_loss": running_loss,
+                "test_loss": test_loss,
+                "MSE": mse,
+                "IC": IC,
+                "RIC": RIC,
+                "Precision@10": prec_10
+            })
+
+            # 保存最佳模型
+            if prec_10 > best_prec_10:
+                best_prec_10 = prec_10
+                torch.save(model.state_dict(), 'best_model.pth')
+                print(f"Best model saved at epoch {epoch + 1}")
 
 if __name__ == '__main__':
     # Hyperparameter Exploration
-    # wandb.login(key='7f5f63654c990eb6c7d796f534bf9db8cfcae73e')
-    wandb.login()
+    wandb.login(key='7f5f63654c990eb6c7d796f534bf9db8cfcae73e')
+    # 扫描
     sweep_configuration = \
         {
-            'name': 'e4',
+            'name': 'e1',
             'early_terminate': {'eta': 2, 'min_iter': 30, 's': 3, 'type': 'hyperband'},
             'method': 'bayes',
-            'metric': {'goal': 'minimize', 'name': 'test_sqrt_loss'},
+            'metric': {'goal': 'maximize', 'name': 'best_prec_10'},
             'parameters':
                 {
                     'hyper_m': {'values': [10,15,20] },
-                    'lr': {'distribution': 'uniform', 'min': 5e-4, 'max': 5e-3},
-                    'weight_decay': {'distribution': 'uniform', 'max': 1e-4, 'min': 1e-5}
+                    'lr': {'distribution': 'uniform', 'min': 5e-3, 'max': 5e-2},
+                    'weight_decay': {'distribution': 'uniform', 'max': 1e-4, 'min': 1e-5},
                 }
         }
+
+    # # 运行
+    # sweep_configuration = \
+    #     {
+    #         'name': 'run_best',
+    #         'method': 'bayes',
+    #         'metric': {'goal': 'minimize', 'name': 'test_sqrt_loss'},
+    #         'parameters':
+    #             {
+    #                 'hyper_m': {'values': [15] },
+    #                 'lr': {'values': [0.004746203357144903]},
+    #                 'weight_decay': {'values': [2.6812795189241473e-05]}
+    #             }
+    #     }
+
     # Initialize sweep by passing in config.
     sweep_id = wandb.sweep(sweep=sweep_configuration, project="stock")
     # Start sweep job.
-    wandb.agent(sweep_id, function=train, count=5)
+    wandb.agent(sweep_id, function=train_test, count=5)

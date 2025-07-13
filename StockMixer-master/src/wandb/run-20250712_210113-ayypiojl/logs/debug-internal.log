@@ -1,0 +1,16 @@
+{"time":"2025-07-12T21:01:13.9151357+08:00","level":"INFO","msg":"stream: starting","core version":"0.20.2rc20250616"}
+{"time":"2025-07-12T21:01:14.6099061+08:00","level":"INFO","msg":"stream: created new stream","id":"ayypiojl"}
+{"time":"2025-07-12T21:01:14.6099061+08:00","level":"INFO","msg":"stream: started","id":"ayypiojl"}
+{"time":"2025-07-12T21:01:14.6099061+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"ayypiojl"}
+{"time":"2025-07-12T21:01:14.6099061+08:00","level":"INFO","msg":"sender: started","stream_id":"ayypiojl"}
+{"time":"2025-07-12T21:01:14.6099061+08:00","level":"INFO","msg":"handler: started","stream_id":"ayypiojl"}
+{"time":"2025-07-12T21:01:14.898343+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-12T21:01:57.0730926+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-12T21:01:57.0730926+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-12T21:01:58.0916499+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.3280945,"progress":"513B/513B"}],"total_operations":1}}
+{"time":"2025-07-12T21:01:58.0944527+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-12T21:01:58.3800334+08:00","level":"INFO","msg":"stream: closing","id":"ayypiojl"}
+{"time":"2025-07-12T21:01:58.3800334+08:00","level":"INFO","msg":"handler: closed","stream_id":"ayypiojl"}
+{"time":"2025-07-12T21:01:58.3800334+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ayypiojl"}
+{"time":"2025-07-12T21:01:58.3800334+08:00","level":"INFO","msg":"sender: closed","stream_id":"ayypiojl"}
+{"time":"2025-07-12T21:01:58.3800334+08:00","level":"INFO","msg":"stream: closed","id":"ayypiojl"}

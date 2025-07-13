@@ -1,0 +1,16 @@
+{"time":"2025-07-12T20:54:04.3581776+08:00","level":"INFO","msg":"stream: starting","core version":"0.20.2rc20250616"}
+{"time":"2025-07-12T20:54:05.0655804+08:00","level":"INFO","msg":"stream: created new stream","id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:05.0655804+08:00","level":"INFO","msg":"stream: started","id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:05.0655804+08:00","level":"INFO","msg":"handler: started","stream_id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:05.0655804+08:00","level":"INFO","msg":"sender: started","stream_id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:05.0655804+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:05.3109406+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-12T20:54:05.4669434+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-12T20:54:05.4669434+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-12T20:54:06.4683451+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-metadata.json","runtime_seconds":0.8857971,"progress":"670B/670B"},{"desc":"uploading output.log","runtime_seconds":0.5909668,"progress":"1.7KB/1.7KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.5909668,"progress":"24B/24B"},{"desc":"uploading config.yaml","runtime_seconds":0.3362005,"progress":"513B/513B"}],"total_operations":4}}
+{"time":"2025-07-12T20:54:06.8796165+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-12T20:54:07.2652017+08:00","level":"INFO","msg":"stream: closing","id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:07.2652017+08:00","level":"INFO","msg":"handler: closed","stream_id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:07.2652017+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:07.2661173+08:00","level":"INFO","msg":"sender: closed","stream_id":"etnvyyg4"}
+{"time":"2025-07-12T20:54:07.2661173+08:00","level":"INFO","msg":"stream: closed","id":"etnvyyg4"}
