@@ -23,7 +23,7 @@ def predict(input_data):
         stocks=83,
         time_steps=16,
         channels=5,
-        market=10,
+        market=15,
         scale=3
     )
     model.load_state_dict(torch.load('best_model.pth'))
