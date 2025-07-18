@@ -1,0 +1,8 @@
+wandb_version: 1
+
+alpha:
+  value: 4.507437418620301
+learning_rate:
+  value: 0.0025006021410127425
+market_num:
+  value: 10

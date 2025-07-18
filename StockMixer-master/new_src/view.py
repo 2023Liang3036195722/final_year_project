@@ -1,117 +1,118 @@
 import numpy as np
-# 读取 .npy 文件
-data = np.load('stock_data_max_values.npy')
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# 查看数据的基本信息
-print('数据类型：', type(data))
-print('数据形状：', data.shape)
-print('数据内容：')
+# Read the .npy file
+# data = np.load('stock_data.npy')
+data = np.load('stock_data_normalized.npy')
+print('Data shape:', data.shape)
+print('Data content:')
 print(data)
+features = ['High', 'Low', 'Open', 'Volume', 'Close']
 
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-#
-# # 设置中文字体
-# plt.rcParams["font.family"] = ["SimHei", "WenQuanYi Micro Hei", "Heiti TC"]
-# plt.rcParams["axes.unicode_minus"] = False  # 解决负号显示问题
-#
-# # 加载数据
-# data = np.load('SP500.npy')
-# print(f"数据形状: {data.shape} (样本数, 时间点, 特征数)")
-#
-# # 1. 整体统计信息
-# print("\n=== 整体统计信息 ===")
-# print(f"数据类型: {data.dtype}")
-# print(f"整体最小值: {np.min(data):.4f}")
-# print(f"整体最大值: {np.max(data):.4f}")
-# print(f"整体均值: {np.mean(data):.4f}")
-# print(f"整体标准差: {np.std(data):.4f}")
-#
-# # 2. 按特征分析分布
-# features = ['特征1', '特征2', '特征3', '特征4', '特征5']
-# plt.figure(figsize=(15, 10))
-#
-# for i in range(data.shape[2]):
-#     feature_data = data[99, :, i].flatten()
-#
-#     plt.subplot(2, 3, i + 1)
-#     sns.histplot(feature_data, kde=True, bins=50)
-#     plt.title(f'{features[i]} 分布')
-#     plt.xlabel('值')
-#     plt.ylabel('频次')
-#
-#     # 显示统计信息
-#     plt.figtext(0.15, 0.02 + i * 0.04,
-#                 f"{features[i]}: 均值={np.mean(feature_data):.4f}, 标准差={np.std(feature_data):.4f}, "
-#                 f"最小值={np.min(feature_data):.4f}, 最大值={np.max(feature_data):.4f}",
-#                 fontsize=10)
-#
-# plt.tight_layout()
-# plt.savefig('feature_distributions.png')
-# plt.show()
-#
-# # 3. 时间趋势分析（每个特征选择一个代表性样本）
-# plt.figure(figsize=(15, 10))
-# sample_idx = 0  # 选择第一个样本进行分析
-#
-# for i in range(data.shape[2]):
-#     plt.subplot(3, 2, i + 1)
-#     plt.plot(data[sample_idx, :, i])
-#     plt.title(f'{features[i]} 时间趋势 (样本 {sample_idx})')
-#     plt.xlabel('时间点')
-#     plt.ylabel('值')
-#
-# plt.tight_layout()
-# plt.savefig('time_trends.png')
-# plt.show()
-#
-# # 4. 异常值检测（使用IQR方法）
-# plt.figure(figsize=(15, 8))
+# # 1. Analyze the distribution by feature
+# fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+# axes = axes.flatten()
 #
 # for i in range(data.shape[2]):
 #     feature_data = data[:, :, i].flatten()
-#
-#     # 计算四分位数
-#     q1 = np.percentile(feature_data, 25)
-#     q3 = np.percentile(feature_data, 75)
-#     iqr = q3 - q1
-#     lower_bound = q1 - 1.5 * iqr
-#     upper_bound = q3 + 1.5 * iqr
-#
-#     # 检测异常值
-#     outliers = feature_data[(feature_data < lower_bound) | (feature_data > upper_bound)]
-#     print(f"\n{features[i]} 异常值数量: {len(outliers)} ({len(outliers) / len(feature_data) * 100:.2f}%)")
-#
-#     plt.subplot(2, 3, i + 1)
-#     sns.boxplot(y=feature_data)
-#     plt.title(f'{features[i]} 箱线图')
-#
-# plt.tight_layout()
-# plt.savefig('boxplots.png')
+#     # Calculate statistics
+#     mean_val = np.mean(feature_data)
+#     std_val = np.std(feature_data)
+#     min_val = np.min(feature_data)
+#     max_val = np.max(feature_data)
+#     # Plot distribution with better spacing
+#     sns.histplot(feature_data, kde=True, bins=50, ax=axes[i])
+#     # Set title with statistical information
+#     axes[i].set_title(f'{features[i]} \n(Mean={mean_val:.4f}, STD={std_val:.4f})', fontsize=12)
+#     axes[i].set_xlabel('Value', fontsize=10)
+#     axes[i].set_ylabel('Frequency', fontsize=10)
+#     # Add annotation with min/max values
+#     axes[i].annotate(f'Min: {min_val:.4f}\nMax: {max_val:.4f}',
+#                      xy=(0.5, 0.95), xycoords='axes fraction',
+#                      bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="gray", alpha=0.8),
+#                      fontsize=9, ha='left', va='top')
+# # Remove empty subplots
+# fig.delaxes(axes[5])
+# # Adjust layout spacing
+# plt.subplots_adjust(left=0.08, right=0.95, top=0.92, bottom=0.08, wspace=0.25, hspace=0.35)
+# plt.savefig('feature_distributions.png', dpi=300, bbox_inches='tight')
 # plt.show()
-#
-# # 5. 特征相关性分析
-# plt.figure(figsize=(10, 8))
-#
-# # 计算所有样本所有时间点的特征相关性
-# correlation = np.zeros((5, 5))
-# for i in range(5):
-#     for j in range(5):
-#         if i != j:
-#             # 计算两个特征之间的Pearson相关系数
-#             corr = np.corrcoef(data[:, :, i].flatten(), data[:, :, j].flatten())[0, 1]
-#             correlation[i, j] = corr
-#
-# # 绘制热图
-# mask = np.triu(np.ones_like(correlation, dtype=bool))
-# sns.heatmap(correlation, annot=True, fmt=".2f", cmap="coolwarm", mask=mask,
-#             xticklabels=features, yticklabels=features)
-# plt.title('特征相关性分析')
-# plt.savefig('feature_correlation.png')
-# plt.show()
-#
-# print("\n=== 分布分析总结 ===")
-# print("1. 各特征的基本统计信息（均值、标准差等）已显示在分布图下方")
-# print("2. 时间趋势图展示了各特征随时间的变化情况")
-# print("3. 异常值检测显示了可能需要处理的离群数据点")
-# print("4. 特征相关性热图展示了各特征间的线性相关程度")
+
+# 2. Analyze the distribution by feature ----single stock 12
+fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+axes = axes.flatten()
+for i in range(data.shape[2]):
+    feature_data = data[12, :, i].flatten()
+    # Calculate statistics
+    mean_val = np.mean(feature_data)
+    std_val = np.std(feature_data)
+    min_val = np.min(feature_data)
+    max_val = np.max(feature_data)
+    # Plot distribution with better spacing
+    sns.histplot(feature_data, kde=True, bins=50, ax=axes[i])
+    # Set title with statistical information
+    axes[i].set_title(f'{features[i]} \n(Mean={mean_val:.4f}, STD={std_val:.4f})', fontsize=12)
+    axes[i].set_xlabel('Value', fontsize=10)
+    axes[i].set_ylabel('Frequency', fontsize=10)
+    # Add annotation with min/max values
+    axes[i].annotate(f'Min: {min_val:.4f}\nMax: {max_val:.4f}',
+                     xy=(0.5, 0.95), xycoords='axes fraction',
+                     bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="gray", alpha=0.8),
+                     fontsize=9, ha='left', va='top')
+# Remove empty subplots
+fig.delaxes(axes[5])
+# Adjust layout spacing
+plt.subplots_adjust(left=0.08, right=0.95, top=0.92, bottom=0.08, wspace=0.25, hspace=0.35)
+plt.savefig('feature_distributions_stock12.png', dpi=600, bbox_inches='tight')
+plt.show()
+
+# 3. Time trend analysis
+plt.figure(figsize=(15, 10))
+for i in range(data.shape[2]):
+    plt.subplot(3, 2, i + 1)
+    plt.plot(data[12, :, i])
+    plt.title(f'{features[i]} Time trend (stock12 0386.HK)')
+    plt.xlabel('Time point')
+    plt.ylabel('Value')
+plt.tight_layout()
+plt.savefig('time_trends_stock12.png')
+plt.show()
+
+# 4. Outlier detection (using the IQR method)
+plt.figure(figsize=(15, 8))
+for i in range(data.shape[2]):
+    feature_data = data[12, :, i].flatten()
+    # Calculate quartiles
+    q1 = np.percentile(feature_data, 25)
+    q3 = np.percentile(feature_data, 75)
+    iqr = q3 - q1
+    lower_bound = q1 - 1.5 * iqr
+    upper_bound = q3 + 1.5 * iqr
+    # Detect outliers
+    outliers = feature_data[(feature_data < lower_bound) | (feature_data > upper_bound)]
+    print(f"\n{features[i]} Number of outliers: {len(outliers)} ({len(outliers) / len(feature_data) * 100:.2f}%)")
+    plt.subplot(2, 3, i + 1)
+    sns.boxplot(y=feature_data)
+    plt.title(f'{features[i]} Box plot (stock12 0386.HK)')
+plt.tight_layout()
+plt.savefig('boxplots_stock12.png')
+plt.show()
+
+# 5. Feature correlation analysis
+plt.figure(figsize=(10, 8))
+# Calculate the feature correlation for all samples at all time points
+correlation = np.zeros((5, 5))
+for i in range(5):
+    for j in range(5):
+        if i != j:
+            # Calculate the Pearson correlation coefficient between two features
+            corr = np.corrcoef(data[:, :, i].flatten(), data[:, :, j].flatten())[0, 1]
+            correlation[i, j] = corr
+# Draw a heatmap
+mask = np.triu(np.ones_like(correlation, dtype=bool))
+sns.heatmap(correlation, annot=True, fmt=".2f", cmap="coolwarm", mask=mask,
+            xticklabels=features, yticklabels=features)
+plt.title('Feature correlation analysis (stock12 0386.HK)')
+plt.savefig('feature_correlation_stock12.png')
+plt.show()

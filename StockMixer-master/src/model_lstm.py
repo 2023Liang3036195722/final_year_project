@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 
 
@@ -19,12 +18,14 @@ class StockLSTM(nn.Module):
         self.fc = nn.Linear(64, 1)
 
     def forward(self, inputs):
-        # inputs的形状为 (B, N, T, F) 将其转换为 (B*N, T, F) 以适应LSTM的输入
+        # Inputs : shape (B, N, T, F)
+        # are converted to (B*N, T, F) to fit the LSTM input
         batch_size = inputs.size(0)
         inputs = inputs.view(-1, self.time_steps, self.features)
         normalized_inputs = self.input_ln(inputs)
         lstm_out, _ = self.lstm(normalized_inputs)
-        last_output = lstm_out[:, -1, :]  # 形状: (B*N, 64)
+        # shape : (B*N,64)
+        last_output = lstm_out[:, -1, :]
         normalized_output = self.bn(last_output)
         output = self.fc(normalized_output)
         output = output.view(batch_size, self.stocks)

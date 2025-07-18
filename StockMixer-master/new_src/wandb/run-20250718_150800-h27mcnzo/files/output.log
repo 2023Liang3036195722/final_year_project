@@ -1,0 +1,180 @@
+epoch1------
+Train : loss:0.0252617  =  0.0216684 + alpha*0.000933608
+Valid : loss:0.00915137  =  0.00699569 + alpha*0.000560089
+Test: loss:0.0173811  =  0.0137774 + alpha*0.000936315
+Valid performance: mse:0.00699569, IC:0.0150181, ICIR:0.0980327, prec@10:0.469863, SR:0.223767
+Test performance: mse:0.0137774, IC:0.0105683, ICIR:0.0514894, prec@10:0.534694, SR:1.2709
+epoch2------
+Train : loss:0.00648457  =  0.00466068 + alpha*0.000473881
+Valid : loss:0.0050796  =  0.00313356 + alpha*0.00050562
+Test: loss:0.00989784  =  0.00680092 + alpha*0.000804641
+Valid performance: mse:0.00313356, IC:0.0264602, ICIR:0.17287, prec@10:0.486301, SR:0.595721
+Test performance: mse:0.00680092, IC:0.00961291, ICIR:0.0471845, prec@10:0.538095, SR:0.77782
+epoch3------
+Train : loss:0.00471248  =  0.00331795 + alpha*0.000362328
+Valid : loss:0.00429626  =  0.00255382 + alpha*0.000452723
+Test: loss:0.00790999  =  0.00542923 + alpha*0.00064455
+Valid performance: mse:0.00255382, IC:0.0115009, ICIR:0.0620162, prec@10:0.463014, SR:0.0201965
+Test performance: mse:0.00542923, IC:0.0257314, ICIR:0.124108, prec@10:0.544898, SR:1.5773
+epoch4------
+Train : loss:0.00426388  =  0.00305009 + alpha*0.000315366
+Valid : loss:0.00280285  =  0.00153272 + alpha*0.000330003
+Test: loss:0.00572686  =  0.00363733 + alpha*0.000542901
+Valid performance: mse:0.00153272, IC:0.0307609, ICIR:0.184732, prec@10:0.510959, SR:-0.282701
+Test performance: mse:0.00363733, IC:0.0227774, ICIR:0.113631, prec@10:0.544218, SR:1.79372
+epoch5------
+Train : loss:0.00384535  =  0.00273736 + alpha*0.000287877
+Valid : loss:0.00285334  =  0.00158508 + alpha*0.000329519
+Test: loss:0.00540531  =  0.00342542 + alpha*0.000514415
+Valid performance: mse:0.00158508, IC:0.0156791, ICIR:0.0812011, prec@10:0.484932, SR:-1.17157
+Test performance: mse:0.00342542, IC:0.0237104, ICIR:0.112859, prec@10:0.539456, SR:1.53025
+epoch6------
+Train : loss:0.00304534  =  0.00210516 + alpha*0.000244278
+Valid : loss:0.0058887  =  0.00409972 + alpha*0.000464813
+Test: loss:0.00856326  =  0.00596873 + alpha*0.000674109
+Valid performance: mse:0.00409972, IC:0.004646, ICIR:0.0256934, prec@10:0.476712, SR:-0.115441
+Test performance: mse:0.00596873, IC:0.0225471, ICIR:0.114121, prec@10:0.52585, SR:1.09864
+epoch7------
+Train : loss:0.00331896  =  0.00241139 + alpha*0.000235806
+Valid : loss:0.00236095  =  0.0012504 + alpha*0.000288544
+Test: loss:0.00443948  =  0.00270687 + alpha*0.000450167
+Valid performance: mse:0.0012504, IC:0.0121627, ICIR:0.0839287, prec@10:0.479452, SR:-1.44297
+Test performance: mse:0.00270687, IC:0.0250197, ICIR:0.122563, prec@10:0.529932, SR:0.779449
+epoch8------
+Train : loss:0.00246108  =  0.00171246 + alpha*0.000194505
+Valid : loss:0.00230482  =  0.00155622 + alpha*0.000194501
+Test: loss:0.00377589  =  0.00254255 + alpha*0.000320447
+Valid performance: mse:0.00155622, IC:0.0415761, ICIR:0.244072, prec@10:0.490411, SR:-0.505315
+Test performance: mse:0.00254255, IC:0.0253066, ICIR:0.119099, prec@10:0.529932, SR:1.1933
+epoch9------
+Train : loss:0.00215475  =  0.00150409 + alpha*0.000169054
+Valid : loss:0.00170795  =  0.000916144 + alpha*0.000205727
+Test: loss:0.00313739  =  0.00188517 + alpha*0.000325351
+Valid performance: mse:0.000916144, IC:0.0510833, ICIR:0.265383, prec@10:0.519178, SR:0.337461
+Test performance: mse:0.00188517, IC:0.0277929, ICIR:0.126975, prec@10:0.533333, SR:1.43977
+epoch10------
+Train : loss:0.00212054  =  0.00147702 + alpha*0.000167198
+Valid : loss:0.00164719  =  0.000894804 + alpha*0.000195484
+Test: loss:0.00318579  =  0.00197585 + alpha*0.000314369
+Valid performance: mse:0.000894804, IC:0.0223095, ICIR:0.150377, prec@10:0.49589, SR:0.841871
+Test performance: mse:0.00197585, IC:0.0262696, ICIR:0.137421, prec@10:0.532653, SR:1.78576
+epoch11------
+Train : loss:0.00201616  =  0.0013895 + alpha*0.000162818
+Valid : loss:0.0032976  =  0.00236817 + alpha*0.000241486
+Test: loss:0.00434979  =  0.00311669 + alpha*0.000320384
+Valid performance: mse:0.00236817, IC:0.0516776, ICIR:0.251158, prec@10:0.50137, SR:0.626364
+Test performance: mse:0.00311669, IC:0.021264, ICIR:0.0994544, prec@10:0.521769, SR:0.590076
+epoch12------
+Train : loss:0.00225357  =  0.0016105 + alpha*0.000167081
+Valid : loss:0.0025421  =  0.00190657 + alpha*0.000165122
+Test: loss:0.00375818  =  0.00262475 + alpha*0.000294488
+Valid performance: mse:0.00190657, IC:0.0390932, ICIR:0.254603, prec@10:0.486301, SR:0.0799217
+Test performance: mse:0.00262475, IC:0.0260908, ICIR:0.13122, prec@10:0.527891, SR:1.22548
+epoch13------
+Train : loss:0.0021329  =  0.00154111 + alpha*0.00015376
+Valid : loss:0.00271191  =  0.00198046 + alpha*0.000190044
+Test: loss:0.00413046  =  0.0028682 + alpha*0.00032796
+Valid performance: mse:0.00198046, IC:0.0309573, ICIR:0.193936, prec@10:0.482192, SR:0.354562
+Test performance: mse:0.0028682, IC:0.0231421, ICIR:0.11194, prec@10:0.529932, SR:1.47379
+epoch14------
+Train : loss:0.00204807  =  0.00141408 + alpha*0.000164723
+Valid : loss:0.00129496  =  0.000793892 + alpha*0.000130187
+Test: loss:0.00243554  =  0.00159528 + alpha*0.000218316
+Valid performance: mse:0.000793892, IC:0.034616, ICIR:0.228917, prec@10:0.476712, SR:-0.129385
+Test performance: mse:0.00159528, IC:0.0300444, ICIR:0.143645, prec@10:0.516327, SR:1.57467
+epoch15------
+Train : loss:0.00183056  =  0.00133891 + alpha*0.000127739
+Valid : loss:0.00267217  =  0.00193891 + alpha*0.000190516
+Test: loss:0.00361998  =  0.00247617 + alpha*0.000297184
+Valid performance: mse:0.00193891, IC:0.0149886, ICIR:0.0988177, prec@10:0.483562, SR:-0.750908
+Test performance: mse:0.00247617, IC:0.0364021, ICIR:0.164179, prec@10:0.528571, SR:1.0556
+epoch16------
+Train : loss:0.00173634  =  0.00123527 + alpha*0.000130188
+Valid : loss:0.001389  =  0.000880782 + alpha*0.000132046
+Test: loss:0.00274634  =  0.00186076 + alpha*0.000230092
+Valid performance: mse:0.000880782, IC:0.0399551, ICIR:0.221393, prec@10:0.515068, SR:1.59553
+Test performance: mse:0.00186076, IC:0.015897, ICIR:0.0818206, prec@10:0.520408, SR:1.25252
+epoch17------
+Train : loss:0.00183221  =  0.00132606 + alpha*0.000131508
+Valid : loss:0.00144284  =  0.000878994 + alpha*0.000146498
+Test: loss:0.00262672  =  0.00179976 + alpha*0.000214861
+Valid performance: mse:0.000878994, IC:0.0322229, ICIR:0.178987, prec@10:0.490411, SR:-0.206001
+Test performance: mse:0.00179976, IC:0.0321781, ICIR:0.154157, prec@10:0.558503, SR:2.05542
+epoch18------
+Train : loss:0.00181353  =  0.00129332 + alpha*0.000135159
+Valid : loss:0.00175985  =  0.00116426 + alpha*0.000154745
+Test: loss:0.0024061  =  0.00161911 + alpha*0.000204476
+Valid performance: mse:0.00116426, IC:0.048257, ICIR:0.229711, prec@10:0.493151, SR:0.817208
+Test performance: mse:0.00161911, IC:0.0149955, ICIR:0.076329, prec@10:0.52517, SR:1.36586
+epoch19------
+Train : loss:0.00186504  =  0.0013456 + alpha*0.000134961
+Valid : loss:0.00242475  =  0.00133044 + alpha*0.000284323
+Test: loss:0.00347413  =  0.00199791 + alpha*0.000383553
+Valid performance: mse:0.00133044, IC:0.0175679, ICIR:0.105471, prec@10:0.50274, SR:-0.665419
+Test performance: mse:0.00199791, IC:-0.00252986, ICIR:-0.0141627, prec@10:0.529252, SR:1.29843
+epoch20------
+Train : loss:0.00177092  =  0.00124874 + alpha*0.000135671
+Valid : loss:0.00312748  =  0.0021493 + alpha*0.00025415
+Test: loss:0.00447786  =  0.00339478 + alpha*0.000281407
+Valid performance: mse:0.0021493, IC:-0.010994, ICIR:-0.0463906, prec@10:0.463014, SR:-0.949218
+Test performance: mse:0.00339478, IC:0.0337352, ICIR:0.156941, prec@10:0.539456, SR:1.48468
+epoch21------
+Train : loss:0.00181932  =  0.00134818 + alpha*0.000122412
+Valid : loss:0.00170358  =  0.000982971 + alpha*0.000187228
+Test: loss:0.00247641  =  0.00152206 + alpha*0.000247958
+Valid performance: mse:0.000982971, IC:0.0244507, ICIR:0.131838, prec@10:0.494521, SR:0.935962
+Test performance: mse:0.00152206, IC:0.0352781, ICIR:0.167576, prec@10:0.540136, SR:1.98597
+epoch22------
+Train : loss:0.00164357  =  0.00118638 + alpha*0.000118789
+Valid : loss:0.002242  =  0.00159698 + alpha*0.000167591
+Test: loss:0.00254528  =  0.00184327 + alpha*0.000182395
+Valid performance: mse:0.00159698, IC:0.0191846, ICIR:0.112477, prec@10:0.479452, SR:-0.519071
+Test performance: mse:0.00184327, IC:0.0380546, ICIR:0.204031, prec@10:0.543537, SR:1.84662
+epoch23------
+Train : loss:0.00156079  =  0.00113493 + alpha*0.000110647
+Valid : loss:0.00115895  =  0.000656299 + alpha*0.000130598
+Test: loss:0.0019633  =  0.00124761 + alpha*0.000185951
+Valid performance: mse:0.000656299, IC:0.0668241, ICIR:0.290819, prec@10:0.510959, SR:1.33257
+Test performance: mse:0.00124761, IC:0.0332451, ICIR:0.15907, prec@10:0.534014, SR:1.15842
+epoch24------
+Train : loss:0.00139046  =  0.00101108 + alpha*9.85708e-05
+Valid : loss:0.00133776  =  0.000934947 + alpha*0.00010466
+Test: loss:0.00232579  =  0.00170133 + alpha*0.000162246
+Valid performance: mse:0.000934947, IC:0.0222908, ICIR:0.119314, prec@10:0.49863, SR:-0.725431
+Test performance: mse:0.00170133, IC:0.0185252, ICIR:0.0836446, prec@10:0.539456, SR:2.01807
+epoch25------
+Train : loss:0.00166392  =  0.00115266 + alpha*0.000132836
+Valid : loss:0.00131235  =  0.000720735 + alpha*0.000153713
+Test: loss:0.00222626  =  0.00138642 + alpha*0.000218205
+Valid performance: mse:0.000720735, IC:0.0223784, ICIR:0.140557, prec@10:0.484932, SR:-1.56268
+Test performance: mse:0.00138642, IC:0.0502783, ICIR:0.251478, prec@10:0.565986, SR:2.25394
+epoch26------
+Train : loss:0.0014515  =  0.00106079 + alpha*0.000101514
+Valid : loss:0.00394995  =  0.00336218 + alpha*0.000152716
+Test: loss:0.00422995  =  0.00362073 + alpha*0.000158288
+Valid performance: mse:0.00336218, IC:0.0349197, ICIR:0.155592, prec@10:0.5, SR:0.438151
+Test performance: mse:0.00362073, IC:0.0120769, ICIR:0.056215, prec@10:0.544218, SR:1.08151
+epoch27------
+Train : loss:0.00146738  =  0.00107228 + alpha*0.000102655
+Valid : loss:0.00224925  =  0.00143878 + alpha*0.000210577
+Test: loss:0.00249812  =  0.00163487 + alpha*0.000224288
+Valid performance: mse:0.00143878, IC:-0.00201312, ICIR:-0.0088036, prec@10:0.468493, SR:-0.573829
+Test performance: mse:0.00163487, IC:0.0427182, ICIR:0.212896, prec@10:0.544218, SR:2.14911
+epoch28------
+Train : loss:0.00150002  =  0.00107558 + alpha*0.000110277
+Valid : loss:0.000995608  =  0.000620659 + alpha*9.74193e-05
+Test: loss:0.00169113  =  0.00115728 + alpha*0.000138705
+Valid performance: mse:0.000620659, IC:0.0383635, ICIR:0.221145, prec@10:0.490411, SR:1.44164
+Test performance: mse:0.00115728, IC:0.0203667, ICIR:0.0936465, prec@10:0.534694, SR:0.81718
+epoch29------
+Train : loss:0.00127169  =  0.000926039 + alpha*8.98075e-05
+Valid : loss:0.00144481  =  0.00110071 + alpha*8.94048e-05
+Test: loss:0.00210197  =  0.00166153 + alpha*0.000114435
+Valid performance: mse:0.00110071, IC:0.0394362, ICIR:0.183102, prec@10:0.516438, SR:3.01642
+Test performance: mse:0.00166153, IC:0.0122255, ICIR:0.0604963, prec@10:0.536735, SR:1.35954
+epoch30------
+Train : loss:0.00133711  =  0.000992815 + alpha*8.94552e-05
+Valid : loss:0.00186058  =  0.0013103 + alpha*0.000142973
+Test: loss:0.0025604  =  0.00187906 + alpha*0.000177027
+Valid performance: mse:0.0013103, IC:0.0331946, ICIR:0.255368, prec@10:0.484932, SR:1.08006
+Test performance: mse:0.00187906, IC:0.0114295, ICIR:0.0619288, prec@10:0.536735, SR:1.52798

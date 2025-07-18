@@ -13,7 +13,7 @@ from model import StockMixer
 
 def predict(input_data):
     max_values = np.load('stock_data_max_values.npy')
-    # 标准化
+    # normalization
     normalized_data = np.zeros_like(input_data, dtype=np.float32)
     for i in range(input_data.shape[0]):
         for k in range(input_data.shape[2]):
@@ -23,17 +23,17 @@ def predict(input_data):
         stocks=83,
         time_steps=16,
         channels=5,
-        market=20,
+        market=10,
         scale=3
     )
     model.load_state_dict(torch.load('best_model.pth'))
     model.eval()
-    # input_tensor (83,16,5)
+    # input_tensor : (83,16,5)
     input_tensor = torch.tensor(normalized_data, dtype=torch.float32)
     with torch.no_grad():
         # (83,1)
         output = model(input_tensor)
-        # 反标准化
+        # de-normalization
         output = output.reshape(-1).numpy()
         denormalized_output = output * max_values[:, -1]
     return denormalized_output

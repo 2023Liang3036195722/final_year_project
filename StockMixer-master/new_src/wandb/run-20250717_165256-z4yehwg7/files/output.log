@@ -1,0 +1,49 @@
+epoch1------
+Train : loss:0.0842351  =  0.0778065 + alpha*0.00178619
+D:\GitHub\final_year_project\StockMixer-master\new_src\train.py:64: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  cur_valid_pred[:, cur_offset - (start_index - lookback_length - steps + 1)] = cur_rr[:, 0].cpu()
+D:\GitHub\final_year_project\StockMixer-master\new_src\train.py:65: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  cur_valid_gt[:, cur_offset - (start_index - lookback_length - steps + 1)] = gt_batch[:, 0].cpu()
+D:\GitHub\final_year_project\StockMixer-master\new_src\train.py:66: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  cur_valid_mask[:, cur_offset - (start_index - lookback_length - steps + 1)] = mask_batch[:, 0].cpu()
+Valid : loss:0.0247805  =  0.0203923 + alpha*0.00121928
+Test: loss:0.0580797  =  0.05066 + alpha*0.0020616
+Valid performance: mse:0.0203923, IC:0.0127223, ICIR:0.0717159, prec@10:0.490411, SR:1.27314
+Test performance: mse:0.05066, IC:-0.00701167, ICIR:-0.0425758, prec@10:0.529252, SR:1.10623
+Best model saved to best_model.pth
+epoch2------
+Train : loss:0.0117271  =  0.0088123 + alpha*0.000809875
+Valid : loss:0.0111177  =  0.00800378 + alpha*0.000865224
+Test: loss:0.0260165  =  0.0206447 + alpha*0.00149255
+Valid performance: mse:0.00800378, IC:0.0150252, ICIR:0.0870366, prec@10:0.482192, SR:-0.545036
+Test performance: mse:0.0206447, IC:-0.00401831, ICIR:-0.0222791, prec@10:0.537415, SR:1.19492
+Best model saved to best_model.pth
+epoch3------
+Train : loss:0.00683998  =  0.0048485 + alpha*0.00055334
+Valid : loss:0.00881389  =  0.00628484 + alpha*0.000702707
+Test: loss:0.0162904  =  0.0123478 + alpha*0.00109544
+Valid performance: mse:0.00628484, IC:-0.0100905, ICIR:-0.0475278, prec@10:0.480822, SR:0.30798
+Test performance: mse:0.0123478, IC:0.010042, ICIR:0.0531413, prec@10:0.536054, SR:1.53766
+Best model saved to best_model.pth
+epoch4------
+Train : loss:0.00533815  =  0.00374076 + alpha*0.000443842
+Valid : loss:0.00627412  =  0.00443185 + alpha*0.000511882
+Test: loss:0.011877  =  0.0085036 + alpha*0.000937307
+Valid performance: mse:0.00443185, IC:0.0146143, ICIR:0.0848585, prec@10:0.478082, SR:1.10305
+Test performance: mse:0.0085036, IC:0.00896237, ICIR:0.0473915, prec@10:0.531973, SR:1.70161
+Best model saved to best_model.pth
+epoch5------
+Train : loss:0.00422384  =  0.00285812 + alpha*0.000379471
+Valid : loss:0.00392963  =  0.00238641 + alpha*0.000428789
+Test: loss:0.0101563  =  0.00715095 + alpha*0.000835061
+Valid performance: mse:0.00238641, IC:0.0336272, ICIR:0.238342, prec@10:0.484932, SR:1.03573
+Test performance: mse:0.00715095, IC:0.00294495, ICIR:0.0146987, prec@10:0.536735, SR:1.75842
+Best model saved to best_model.pth
+epoch6------
+Train : loss:0.00365702  =  0.00243917 + alpha*0.000338385
+Valid : loss:0.0038622  =  0.00237745 + alpha*0.000412544
+Test: loss:0.00762708  =  0.00521493 + alpha*0.000670225
+Valid performance: mse:0.00237745, IC:0.00739673, ICIR:0.0436208, prec@10:0.478082, SR:0.0867856
+Test performance: mse:0.00521493, IC:0.0132544, ICIR:0.0728733, prec@10:0.546939, SR:1.6188
+Best model saved to best_model.pth
+epoch7------

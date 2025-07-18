@@ -22,9 +22,8 @@ scale_factor = 3
 # (83,735,5)
 data = np.load('stock_data_normalized.npy')
 close_price_data = data[:, :, -1]
-# 没有缺失数据，所有数据有效
+# no missing data
 mask_data = np.ones((data.shape[0], data.shape[1]))
-# 计算一日收益率
 one_day_return_data = np.zeros((data.shape[0], data.shape[1]))
 for ticket in range(0, data.shape[0]):
     for row in range(1, data.shape[1]):
@@ -125,7 +124,7 @@ def main(config=None):
             test_loss, test_reg_loss, test_rank_loss, test_perf = validate(test_index, trade_dates)
             test_log = 'Test: loss:{:.6}  =  {:.6} + alpha*{:.6}'.format(test_loss, test_reg_loss, test_rank_loss)
             print(test_log)
-            # 记录
+            # record
             wandb.log({
                 "train_loss": tra_loss,
                 "train_reg_loss": tra_reg_loss,
@@ -158,7 +157,7 @@ def main(config=None):
 
             if val_loss < best_valid_loss:
                 best_valid_loss = val_loss
-                # 保存模型
+                # save model
                 model_save_path = 'best_model.pth'
                 torch.save(model.state_dict(), model_save_path)
                 save_log = f"Best model saved to {model_save_path}"
@@ -168,10 +167,10 @@ def main(config=None):
 if __name__ == '__main__':
     # Hyperparameter Exploration
     wandb.login(key='7f5f63654c990eb6c7d796f534bf9db8cfcae73e')
-    # # 扫描
+    # # scan
     # sweep_configuration = \
     #     {
-    #         'name': 'e2',
+    #         'name': 'e1',
     #         'early_terminate': {'eta': 2, 'min_iter': 30, 's': 3, 'type': 'hyperband'},
     #         'method': 'bayes',
     #         'metric': {'goal': 'minimize', 'name': 'val_loss'},
@@ -185,11 +184,11 @@ if __name__ == '__main__':
     # # Initialize sweep by passing in config.
     # sweep_id = wandb.sweep(sweep=sweep_configuration, project="stock")
     # # Start sweep job.
-    # wandb.agent(sweep_id, function=main, count=5)
+    # wandb.agent(sweep_id, function=main, count=10)
 
     fixed_config = {
-        'market_num': 20,
-        'learning_rate': 0.001197,
-        'alpha': 1.105
+        'market_num': 10,
+        'learning_rate': 0.004243,
+        'alpha': 3.895
     }
     main(config=fixed_config)
