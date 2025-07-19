@@ -99,7 +99,7 @@ def train(config=None):
 
 if __name__ == '__main__':
     # Hyperparameter Exploration
-    # wandb.login(key='7f5f63654c990eb6c7d796f534bf9db8cfcae73e')
+    # wandb.login()
     wandb.login()
     sweep_configuration = \
         {
